@@ -1,0 +1,71 @@
+Below is an exam questions
+create a code 
+1. use functional code
+2. the css must use styled components
+3. create a component
+
+functional description:
+1. if type is option then the user can only select one, use option
+2. if type is multiple_choice the user can select multiple, use checkbox
+3. import the file from root directory exam.json
+4. only one question per page
+5. user can proceed to next question after clicking next button
+
+What to display
+1. Order of display Company Overview, Executive Statement, Solution Concept, Existing Technical Environment, Business Requirements, Technical Requirements, question, choices.
+2. show answer button once click it will display the answer, source, topic where in source and topic are URL
+
+Null values or keys not found.
+1. check first if the JSON has the keys
+2. If none don't display the key value pair.
+3. make it error proof
+
+below is the sample file from exam.json
+{
+    "exam_questions": [
+    {
+        "question": "You manage a microservices application on Google Kubernetes Engine (GKE) using Istio. You secure the communication channels between your microservices by implementing an Istio AuthorizationPolicy, a Kubernetes NetworkPolicy, and mTLS on your GKE cluster. You discover that HTTP requests between two Pods to specific URLs fail, while other requests to other URLs succeed. What is the cause of the connection issue?",
+        "type": "option",
+        "source": "https://chat.openai.com/share/765c9245-ab2d-47cd-a7be-e433e8329bc2",
+        "topic": "https://chat.openai.com/share/47c1a5be-53b8-4412-9e4a-fabfd789e038",
+        "choices": {
+            "A": "A Kubernetes NetworkPolicy resource is blocking HTTP traffic between the Pods.",
+            "B": "The Pod initiating the HTTP requests is attempting to connect to the target Pod via an incorrect TCP port.",
+            "C": "The Authorization Policy of your cluster is blocking HTTP requests for specific paths within your application. Most Voted",
+            "D": "The cluster has mTLS configured in permissive mode, but the Pod's sidecar proxy is sending unencrypted traffic in plain text."
+        },
+        "answer": "C"
+      },
+      {
+        "Company Overview": "HipLocal is a community application designed to facilitate communication between people in close proximity. It is used for event planning and organizing sporting events, and for businesses to connect with their local communities. HipLocal launched recently in a few neighborhoods in Dallas and is rapidly growing into a global phenomenon. Its unique style of hyper-local community communication and business outreach is in demand around the world.",
+        "Executive Statement": "We are the number one local community app; it's time to take our local community services global. Our venture capital investors want to see rapid growth and the same great experience for new local and virtual communities that come online, whether their members are 10 or 10000 miles away from each other.",
+        "Solution Concept": "HipLocal wants to expand their existing service, with updated functionality, in new regions to better serve their global customers. They want to hire and train a new team to support these regions in their time zones. They will need to ensure that the application scales smoothly and provides clear uptime data, and that they analyze and respond to any issues that occur.",
+        "Existing Technical Environment": "HipLocal's environment is a mix of on-premises hardware and infrastructure running in Google Cloud Platform. The HipLocal team understands their application well, but has limited experience in global scale applications. Their existing technical environment includes APIs on Compute Engine, a single instance MySQL database for state storage, development freezes for QA testing, manual deployment by infrastructure engineers, and basic uptime indicators.",
+        "Business Requirements": "HipLocal's investors want to expand their footprint and support the increase in demand they are seeing. Requirements include expanding availability to new regions, supporting 10x as many concurrent users, ensuring a consistent experience across regions, obtaining user activity metrics, ensuring compliance with regulations like GDPR, reducing infrastructure management time and cost, and adopting Google-recommended cloud computing practices.",
+        "Technical Requirements": "Provide secure communications between the on-premises data center and cloud-hosted applications and infrastructure. The application must provide usage metrics and monitoring, require API authentication and authorization, implement fast and accurate new feature validation, and provide actionable logging and performance metrics for debugging.",
+        "question": "HipLocal wants to reduce the latency of their services for users in global locations. They have created read replicas of their database in locations where their users reside and configured their service to read traffic using those replicas. How should they further reduce latency for all database interactions with the least amount of effort?",
+        "type": "option",
+        "source": "https://chat.openai.com/share/86252884-f016-4378-a7b0-cd36a9c3f0bc",
+        "topic": "https://chat.openai.com/share/47c1a5be-53b8-4412-9e4a-fabfd789e038",
+        "choices": {
+          "A": "Migrate the database to Bigtable and use it to serve all global user traffic.",
+          "B": "Migrate the database to Cloud Spanner and use it to serve all global user traffic.",
+          "C": "Migrate the database to Firestore in Datastore mode and use it to serve all global user traffic.",
+          "D": "Migrate the services to Google Kubernetes Engine and use a load balancer service to better scale the application."
+        },
+        "answer": "B"
+      },
+      {
+        "Question": "You configured your Compute Engine instance group to scale automatically according to overall CPU usage. However, your application's response latency increases sharply before the cluster has finished adding up instances. You want to provide a more consistent latency experience for your end users by changing the configuration of the instance group autoscaler. Which two configuration changes should you make? (Choose two.)",
+        "type": "multiple_choice",
+        "choices": [
+          "A. Add the label 'AUTOSCALE' to the instance group template.",
+          "B. Decrease the cool-down period for instances added to the group.",
+          "C. Increase the target CPU usage for the instance group autoscaler.",
+          "D. Decrease the target CPU usage for the instance group autoscaler.",
+          "E. Remove the health-check for individual VMs in the instance group."
+        ],
+        "answer": ["B", "D"]
+      }
+    ]
+}
