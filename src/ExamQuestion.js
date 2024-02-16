@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -31,19 +31,40 @@ const ChoicesContainer = styled.div`
 `;
 
 const Choice = styled.div`
-  margin: 5px 0;
-  input[type='radio'],
-  input[type='checkbox'] {
-    margin-right: 10px;
-  }
+margin: 5px 0;
 
-  /* Define styles for highlighting the correct choice */
-  &.correct {
-    background-color: #d4edda; /* Green background color for correct choice */
-    color: #155724; /* Dark green text color for correct choice */
-  }
+label {
+  display: grid;
+  grid-template-columns: auto auto 1fr; /* Three columns: auto width for input, auto for choice key, 1fr for text */
+  align-items: start; /* Align items vertically */
+  gap: 10px; /* Space between the input, choice key, and the text */
+  cursor: pointer;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+  grid-column: 1; /* Position input in the first column */
+  margin-top: 4.5px;
+}
+
+.choiceKey {
+  grid-column: 2; /* Position choice key in the second column */
+  /* Ensuring choice key is also aligned left, consistent with choice text */
+  text-align: left;
+}
+
+.choiceText {
+  grid-column: 3; /* Position choice text in the third column */
+  text-align: left; /* Align choice text to the left */
+  /* Optional: for better control over wrapping or overflow */
+}
+
+/* Styles for highlighting the correct choice */
+&.correct {
+  background-color: #d4edda; /* Green background color for correct choice */
+  color: #155724; /* Dark green text color for correct choice */
+}
 `;
-
 const AnswerButton = styled.button`
   background-color: #007bff;
   color: #fff;
@@ -83,12 +104,14 @@ const HideAnswerButton = styled.button`
     background-color: #dc3545; /* Red for wrong */
   `}
 `;
+
 const InfoText = styled.span`
   display: inline-block;
   margin-right: 10px;
   font-weight: normal;
   color: #333; /* Adjust the color as needed */
 `;
+
 const ConditionalSection = ({ title, content }) => {
   if (content) {
     return (
@@ -114,17 +137,18 @@ const ConditionalLink = ({ href, text }) => {
 
 const renderTextWithLineBreaks = (text) => {
   return text.split('\n').map((line, index) => (
-    <span key={index}>
+    <React.Fragment key={index}>
       {line}
       <br />
-    </span>
+    </React.Fragment>
   ));
 };
 
-const ExamQuestion = ({ questionData }) => {
+const ExamQuestion = ({ questionData, onUserSelectionChange }) => {
   const [showAnswer, setShowAnswer] = useState(false);
-  const [selectedOptions, setSelectedOptions] = useState(new Set());
+  const [selectedOptions, setSelectedOptions] = useState( new Set(questionData.userSelectedChoices || []));
   const [isCorrect, setIsCorrect] = useState(false);
+
   const checkAnswerCorrectness = () => {
     const correctAnswers = new Set(
       Array.isArray(questionData.answer) ? questionData.answer : [questionData.answer]
@@ -132,29 +156,25 @@ const ExamQuestion = ({ questionData }) => {
     return Array.from(selectedOptions).every(option => correctAnswers.has(option)) &&
            correctAnswers.size === selectedOptions.size;
   };
+
   const handleAnswerClick = () => {
-    if (!showAnswer) {
-      setIsCorrect(checkAnswerCorrectness());
-    } else {
-      setIsCorrect(false); // Reset when hiding the answer
-      setSelectedOptions(new Set());
-    }
+    setIsCorrect(!showAnswer ? checkAnswerCorrectness() : false);
+    if (showAnswer) setSelectedOptions(new Set());
     setShowAnswer(!showAnswer);
   };
 
   const handleOptionChange = (choiceKey) => {
     if (questionData.type === 'option') {
       // For radio buttons, just set the selected option
-      setSelectedOptions(new Set([choiceKey]));
+      const newSelection = new Set([choiceKey]);
+      setSelectedOptions(newSelection);
+      onUserSelectionChange?.(Array.from(newSelection));
     } else {
       // For checkboxes, add or remove the selected option from the set
-      setSelectedOptions((prevSelectedOptions) => {
+      setSelectedOptions(prevSelectedOptions => {
         const updatedOptions = new Set(prevSelectedOptions);
-        if (updatedOptions.has(choiceKey)) {
-          updatedOptions.delete(choiceKey);
-        } else {
-          updatedOptions.add(choiceKey);
-        }
+        updatedOptions.has(choiceKey) ? updatedOptions.delete(choiceKey) : updatedOptions.add(choiceKey);
+        onUserSelectionChange?.(Array.from(updatedOptions));
         return updatedOptions;
       });
     }
@@ -166,23 +186,27 @@ const ExamQuestion = ({ questionData }) => {
     return Object.entries(questionData.choices).map(([choiceKey, choiceText]) => (
       <Choice
         key={choiceKey}
-        className={
-          showAnswer && correctAnswers.includes(choiceKey)
-            ? 'correct'
-            : ''
-        }
+        className={ showAnswer && correctAnswers.includes(choiceKey) ? 'correct' : ''}
       >
-        <input
-          type={questionData.type === 'option' ? 'radio' : 'checkbox'}
-          name={questionData.question} // Added for radio buttons to group them
-          checked={selectedOptions.has(choiceKey)}
-          onChange={() => handleOptionChange(choiceKey)}
-        />
-        {choiceKey}: {renderTextWithLineBreaks(choiceText)}
+        <label>
+          <input
+            type={questionData.type === 'option' ? 'radio' : 'checkbox'}
+            name={questionData.question} // Added for radio buttons to group them
+            checked={selectedOptions.has(choiceKey)}
+            onChange={() => handleOptionChange(choiceKey)}
+            id={`choice-${choiceKey}`} // Ensuring the input is associated with its label
+          />
+          <span className="choiceKey">{choiceKey}:</span> 
+          <span className="choiceText">{renderTextWithLineBreaks(choiceText)}</span>
+        </label>
+
       </Choice>
     ));
   };
-  
+
+  useEffect(() => {
+    setSelectedOptions(new Set(questionData.userSelectedChoices || []));
+  }, [questionData.userSelectedChoices]);
 
   return (
     <Container>
@@ -198,7 +222,7 @@ const ExamQuestion = ({ questionData }) => {
       {!showAnswer && <AnswerButton onClick={handleAnswerClick}>Show Answer</AnswerButton>}
       {showAnswer && (
         <>
-         <Answer>
+          <Answer>
             Answer: {questionData.answer}
             <SourceAndTopic>
               <ConditionalLink href={questionData.source} text="Source" />
