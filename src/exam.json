@@ -356,20 +356,6 @@
           "most_voted": ""
       },
       {
-          "question": "You are using Cloud Build to promote a Docker image to Development, Test, and Production environments. You need to ensure that the same Docker image is deployed to each of these environments. How should you identify the Docker image in your build?",
-          "type": "option",
-          "topic": "https://chat.openai.com/share/3b7c977c-c3eb-45a7-983d-9939c8412d35",
-          "choices": {
-              "A": "Use the latest Docker image tag.",
-              "B": "Use a unique Docker image name.",
-              "C": "Use the digest of the Docker image.",
-              "D": "Use a semantic version Docker image tag."
-          },
-          "answer": "C",
-          "page": 0,
-          "most_voted": ""
-      },
-      {
           "question": "Your company has created an application that uploads a report to a Cloud Storage bucket. When the report is uploaded to the bucket, you want to publish a message to a Cloud Pub/Sub topic. You want to implement a solution that will take a small amount of effort to implement. What should you do?",
           "type": "option",
           "topic": "https://chat.openai.com/share/3b7c977c-c3eb-45a7-983d-9939c8412d35",
@@ -632,21 +618,6 @@
               "D": "Write a shutdown script that publishes a message to the Pub/Sub topic announcing that a shutdown is in progress. After the application reads the message, it disconnects from the database."
           },
           "answer": "A",
-          "page": 0,
-          "most_voted": ""
-      },
-      {
-          "question": "You work for a web development team at a small startup. Your manager calls you over the weekend and instructs you to make an emergency update to one of the company's websites. How should you set up your developer environment?",
-          "type": "option",
-          "source": "https://chat.openai.com/share/4ca2c0c7-7472-4a8b-9e56-0e88d6b4e802",
-          "topic": "https://chat.openai.com/share/3b7c977c-c3eb-45a7-983d-9939c8412d35",
-          "choices": {
-              "A": "Use a text editor and the Git command line to send your source code updates as pull requests from a public computer.",
-              "B": "Use a text editor and the Git command line to send your source code updates as pull requests from a virtual machine running on a public computer.",
-              "C": "Use Cloud Shell and the built-in code editor for development. Send your source code updates as pull requests.",
-              "D": "Use a Cloud Storage bucket to store the source code that you need to edit. Mount the bucket to a public computer as a drive, and use a code editor to update the code. Turn on versioning for the bucket, and point it to the team's Git repository."
-          },
-          "answer": "C",
           "page": 0,
           "most_voted": ""
       },
@@ -1300,6 +1271,7 @@
       },
       {
           "question": "Your company needs a database solution that stores customer purchase history and meets the following requirements:\n\u2711 Customers can query their purchase immediately after submission.\n\u2711 Purchases can be sorted on a variety of fields.\n\u2711 Distinct record formats can be stored at the same time.\nWhich storage option satisfies these requirements?",
+          "source": "https://chat.openai.com/share/8141f070-74a2-469a-94dc-481231c6e9ad",
           "type": "option",
           "choices": {
               "A": "Firestore in Native mode",
@@ -3589,6 +3561,402 @@
           "answer": "B",
           "page": 56,
           "most_voted": "A OR B"
+      },
+      {
+        "source": "",
+        "topic": "",
+        "question": "You are using Cloud Build to build a Docker image. You need to modify the build to execute unit and run integration tests. When there is a failure, you want the build history to clearly display the stage at which the build failed.\nWhat should you do?",
+        "type": "option",
+        "choices": {
+          "A": "Add RUN commands in the Dockerfile to execute unit and integration tests.",
+          "B": "Create a Cloud Build build config file with a single build step to compile unit and integration tests.",
+          "C": "Create a Cloud Build build config file that will spawn a separate cloud build pipeline for unit and integration tests.",
+          "D": "Create a Cloud Build build config file with separate cloud builder steps to compile and execute unit and integration tests."
+        },
+        "answer": "D",
+        "page": 9,
+        "most_voted": "D"
+      },
+      {
+        "source": "",
+        "topic": "",
+        "question": "Your code is running on Cloud Functions in project A. It is supposed to write an object in a Cloud Storage bucket owned by project B. However, the write call is failing with the error \"403 Forbidden\".\nWhat should you do to correct the problem?",
+        "type": "option",
+        "choices": {
+          "A": "Grant your user account the roles/storage.objectCreator role for the Cloud Storage bucket.",
+          "B": "Grant your user account the roles/iam.serviceAccountUser role for the service-PROJECTA@gcf-admin-robot.iam.gserviceaccount.com service account.",
+          "C": "Grant the service-PROJECTA@gcf-admin-robot.iam.gserviceaccount.com service account the roles/storage.objectCreator role for the Cloud Storage bucket.",
+          "D": "Enable the Cloud Storage API in project B."
+        },
+        "answer": "C",
+        "page": 9,
+        "most_voted": "C"
+      },
+      {
+        "source": "",
+        "topic": "",
+        "question": "You want to re-architect a monolithic application so that it follows a microservices model. You want to accomplish this efficiently while minimizing the impact of this change to the business.\nWhich approach should you take?",
+        "type": "option",
+        "choices": {
+          "A": "Deploy the application to Compute Engine and turn on autoscaling.",
+          "B": "Replace the application's features with appropriate microservices in phases.",
+          "C": "Refactor the monolithic application with appropriate microservices in a single effort and deploy it.",
+          "D": "Build a new application with the appropriate microservices separate from the monolith and replace it when it is complete."
+        },
+        "answer": "B",
+        "page": 8,
+        "most_voted": "B"
+      },
+      {
+        "source": "",
+        "topic": "",
+        "question": "Your existing application keeps user state information in a single MySQL database. This state information is very user-specific and depends heavily on how long a user has been using an application. The MySQL database is causing challenges to maintain and enhance the schema for various users.\nWhich storage option should you choose?",
+        "type": "option",
+        "choices": {
+          "A": "Cloud SQL",
+          "B": "Cloud Storage",
+          "C": "Cloud Spanner",
+          "D": "Cloud Datastore/Firestore"
+        },
+        "answer": "D",
+        "page": 8,
+        "most_voted": "D"
+      },
+      {
+        "source": "",
+        "topic": "",
+        "question": "You are building a new API. You want to minimize the cost of storing and reduce the latency of serving images.\nWhich architecture should you use?",
+        "type": "option",
+        "choices": {
+          "A": "App Engine backed by Cloud Storage",
+          "B": "Compute Engine backed by Persistent Disk",
+          "C": "Transfer Appliance backed by Cloud Filestore",
+          "D": "Cloud Content Delivery Network (CDN) backed by Cloud Storage"
+        },
+        "answer": "D",
+        "page": 8,
+        "most_voted": "D"
+      },
+      {
+        "source": "",
+        "topic": "",
+        "question": "You are planning to deploy your application in a Google Kubernetes Engine (GKE) cluster. Your application can scale horizontally, and each instance of your application needs to have a stable network identity and its own persistent disk.\nWhich GKE object should you use?",
+        "type": "option",
+        "choices": {
+          "A": "Deployment",
+          "B": "StatefulSet",
+          "C": "ReplicaSet",
+          "D": "ReplicaController"
+        },
+        "answer": "B",
+        "page": 8,
+        "most_voted": "B"
+      },
+      {
+        "source": "",
+        "topic": "",
+        "question": "You have an application in production. It is deployed on Compute Engine virtual machine instances controlled by a managed instance group. Traffic is routed to the instances via a HTTP(s) load balancer. Your users are unable to access your application. You want to implement a monitoring technique to alert you when the application is unavailable.\nWhich technique should you choose?",
+        "type": "option",
+        "choices": {
+          "A": "Smoke tests",
+          "B": "Cloud Monitoring",
+          "C": "Cloud Load Balancing - health checks",
+          "D": "Managed instance group - health checks"
+        },
+        "answer": "B",
+        "page": 7,
+        "most_voted": "B"
+      },
+      {
+        "source": "",
+        "topic": "",
+        "question": "You are load testing your server application. During the first 30 seconds, you observe that a previously inactive Cloud Storage bucket is now servicing 2000 write requests per second and 7500 read requests per second. Your application is now receiving intermittent 5xx and 429 HTTP responses from the Cloud Storage JSON API as the demand escalates. You want to decrease the failed responses from the Cloud Storage API.\nWhat should you do?",
+        "type": "option",
+        "choices": {
+          "A": "Distribute the uploads across a large number of individual storage buckets.",
+          "B": "Use the XML API instead of the JSON API for interfacing with Cloud Storage.",
+          "C": "Pass the HTTP response codes back to clients that are invoking the uploads from your application.",
+          "D": "Limit the upload rate from your application clients so that the dormant bucket's peak request rate is reached more gradually."
+        },
+        "answer": "D",
+        "page": 7,
+        "most_voted": "D"
+      },
+      {
+        "source": "https://chat.openai.com/share/c56d4100-1b63-4678-b486-0d5fc5e7675d",
+        "topic": "",
+        "question": "Your application is controlled by a managed instance group. You want to share a large read-only data set between all the instances in the managed instance group. You want to ensure that each instance can start quickly and can access the data set via its filesystem with very low latency. You also want to minimize the total cost of the solution.\nWhat should you do?",
+        "type": "option",
+        "choices": {
+          "A": "Move the data to a Cloud Storage bucket, and mount the bucket on the filesystem using Cloud Storage FUSE.",
+          "B": "Move the data to a Cloud Storage bucket, and copy the data to the boot disk of the instance via a startup script.",
+          "C": "Move the data to a Compute Engine persistent disk, and attach the disk in read-only mode to multiple Compute Engine virtual machine instances.",
+          "D": "Move the data to a Compute Engine persistent disk, take a snapshot, create multiple disks from the snapshot, and attach each disk to its own instance"
+        },
+        "answer": "C",
+        "page": 7,
+        "most_voted": "C"
+      },
+      {
+        "source": "https://chat.openai.com/share/77cdde41-fe16-49fe-bfd7-42581e49bed0",
+        "topic": "",
+        "question": "You are developing an HTTP API hosted on a Compute Engine virtual machine instance that needs to be invoked by multiple clients within the same Virtual Private Cloud (VPC). You want clients to be able to get the IP address of the service.\nWhat should you do?",
+        "type": "option",
+        "choices": {
+          "A": "Reserve a static external IP address and assign it to an HTTP(S) load balancing service's forwarding rule. Clients should use this IP address to connect to the service.",
+          "B": "Reserve a static external IP address and assign it to an HTTP(S) load balancing service's forwarding rule. Then, define an A record in Cloud DNS. Clients should use the name of the A record to connect to the service.",
+          "C": "Ensure that clients use Compute Engine internal DNS by connecting to the instance name with the url https://[INSTANCE_NAME].[ZONE].c.[PROJECT_ID].internal/.",
+          "D": "Ensure that clients use Compute Engine internal DNS by connecting to the instance name with the url https://[API_NAME]/[API_VERSION]/."
+        },
+        "answer": "C",
+        "page": 7,
+        "most_voted": "C"
+      },
+      {
+        "source": "https://chat.openai.com/share/c5584446-ea38-4298-9970-c222f576aa63",
+        "topic": "",
+        "question": "Your application is logging to Google Cloud Logging. You want to get the count of all requests on all /api/alpha/* endpoints. What should you do?",
+        "type": "option",
+        "choices": {
+          "A": "Create a Google Cloud Monitoring custom metric with a filter for httpRequest.path:/api/alpha/.",
+          "B": "Create a Google Cloud Monitoring custom metric with a filter for resource.labels.endpoint=\"/api/alpha/*\".",
+          "C": "Export the logs to Google Cloud Storage and count lines matching /api/alpha/* using a data processing tool.",
+          "D": "Export the logs to Google Cloud Pub/Sub and count messages matching /api/alpha/* using a subscriber application."
+        },
+        "answer": "B",
+        "page": 7,
+        "most_voted": "B"
+      },
+      {
+        "source": "",
+        "topic": "",
+        "question": "You are writing a single-page web application with a user-interface that communicates with a third-party API for content using XMLHttpRequest. The data displayed on the UI by the API results is less critical than other data displayed on the same web page, so it is acceptable for some requests to not have the API data displayed in the UI. However, calls made to the API should not delay rendering of other parts of the user interface. You want your application to perform well when the API response is an error or a timeout.\nWhat should you do?",
+        "type": "option",
+        "choices": {
+          "A": "Set the asynchronous option for your requests to the API to false and omit the widget displaying the API results when a timeout or error is encountered.",
+          "B": "Set the asynchronous option for your request to the API to true and omit the widget displaying the API results when a timeout or error is encountered.",
+          "C": "Catch timeout or error exceptions from the API call and keep trying with exponential backoff until the API response is successful.",
+          "D": "Catch timeout or error exceptions from the API call and display the error response in the UI widget."
+        },
+        "answer": "B",
+        "page": 6,
+        "most_voted": "B"
+      },
+      {
+        "source": "https://chat.openai.com/share/17dd7ef9-585b-43d9-a518-d0a453e9cf0c",
+        "topic": "",
+        "question": "You are creating a web application that runs in a Compute Engine instance and writes a file to any user's Google Drive. You need to configure the application to authenticate to the Google Drive API. What should you do?",
+        "type": "option",
+        "choices": {
+          "A": "Use an OAuth Client ID that uses the https://www.googleapis.com/auth/drive.file scope to obtain an access token for each user.",
+          "B": "Use an OAuth Client ID with delegated domain-wide authority.",
+          "C": "Use the App Engine service account and https://www.googleapis.com/auth/drive.file scope to generate a signed JSON Web Token (JWT).",
+          "D": "Use the App Engine service account with delegated domain-wide authority."
+        },
+        "answer": "A",
+        "page": 6,
+        "most_voted": "A"
+      },
+      {
+        "source": "",
+        "topic": "",
+        "question": "Your company has a BigQuery dataset named \"Master\" that keeps information about employee travel and expenses. This information is organized by employee department. That means employees should only be able to view information for their department. You want to apply a security framework to enforce this requirement with the minimum number of steps.\nWhat should you do?",
+        "type": "option",
+        "choices": {
+          "A": "Create a separate dataset for each department. Create a view with an appropriate WHERE clause to select records from a particular dataset for the specific department. Authorize this view to access records from your Master dataset. Give employees the permission to this department-specific dataset.",
+          "B": "Create a separate dataset for each department. Create a data pipeline for each department to copy appropriate information from the Master dataset to the specific dataset for the department. Give employees the permission to this department-specific dataset.",
+          "C": "Create a dataset named Master dataset. Create a separate view for each department in the Master dataset. Give employees access to the specific view for their department.",
+          "D": "Create a dataset named Master dataset. Create a separate table for each department in the Master dataset. Give employees access to the specific table for their department."
+        },
+        "answer": "C",
+        "page": 6,
+        "most_voted": "C"
+      },
+      {
+        "source": "",
+        "topic": "",
+        "question": "You are creating a Google Kubernetes Engine (GKE) cluster and run this command:\n\ngcloud container clusters create large-cluster --num-nodes 200\n\nThe command fails with the error:\n\ninsufficient regional quota to satisfy request: resource \"CPUS\": request requires '200.0' and is short '176.0'. project has a quota of '24.0' with '24.0' available\n\nYou want to resolve the issue. What should you do?",
+        "type": "option",
+        "choices": {
+          "A": "Request additional GKE quota in the GCP Console.",
+          "B": "Request additional Compute Engine quota in the GCP Console.",
+          "C": "Open a support case to request additional GKE quota.",
+          "D": "Decouple services in the cluster, and rewrite new clusters to function with fewer cores."
+        },
+        "answer": "B",
+        "page": 6,
+        "most_voted": "B"
+      },      
+      {
+        "source": "",
+        "topic": "",
+        "question": "You plan to make a simple HTML application available on the internet. This site keeps information about FAQs for your application. The application is static and contains images, HTML, CSS, and Javascript. You want to make this application available on the internet with as few steps as possible.\nWhat should you do?",
+        "type": "option",
+        "choices": {
+          "A": "Upload your application to Cloud Storage.",
+          "B": "Upload your application to an App Engine environment.",
+          "C": "Create a Compute Engine instance with Apache web server installed. Configure Apache web server to host the application.",
+          "D": "Containerize your application first. Deploy this container to Google Kubernetes Engine (GKE) and assign an external IP address to the GKE pod hosting the application."
+        },
+        "answer": "A",
+        "page": 5,
+        "most_voted": "A"
+      },
+      {
+        "source": "https://chat.openai.com/share/162aa870-03ff-4ecf-8a01-c3edc7ac648c",
+        "topic": "",
+        "question": "Your company has deployed a new API to App Engine Standard environment. During testing, the API is not behaving as expected. You want to monitor the application over time to diagnose the problem within the application code without redeploying the application.\nWhich tool should you use?",
+        "type": "option",
+        "choices": {
+          "A": "Cloud Trace",
+          "B": "Cloud Monitoring",
+          "C": "Cloud Debugger Snapshots",
+          "D": "Cloud Debugger Logpoints"
+        },
+        "answer": "D",
+        "page": 5,
+        "most_voted": "D"
+      },
+      {
+        "source": "https://chat.openai.com/share/6269256c-9548-4745-9bcb-57485257e1ef",
+        "topic": "",
+        "question": "You want to use the Cloud Logging Agent to send an application's log file to Cloud Logging from a Compute Engine virtual machine instance.\nAfter installing the Cloud Logging Agent, what should you do first?",
+        "type": "option",
+        "choices": {
+          "A": "Enable the Error Reporting API on the project.",
+          "B": "Grant the instance full access to all Cloud APIs.",
+          "C": "Configure the application log file as a custom source.",
+          "D": "Create a Cloud Logging sink with a filter that matches the application's log entries."
+        },
+        "answer": "C",
+        "page": 5,
+        "most_voted": "C"
+      },
+      {
+        "source": "",
+        "topic": "",
+        "question": "Your company has a BigQuery data mart that provides analytics information to hundreds of employees. One user of wants to run jobs without interrupting important workloads. This user isn't concerned about the time it takes to run these jobs. You want to fulfill this request while minimizing cost to the company and the effort required on your part.\nWhat should you do?",
+        "type": "option",
+        "choices": {
+          "A": "Ask the user to run the jobs as batch jobs.",
+          "B": "Create a separate project for the user to run jobs.",
+          "C": "Add the user as a job.user role in the existing project.",
+          "D": "Allow the user to run jobs when important workloads are not running."
+        },
+        "answer": "A",
+        "page": 5,
+        "most_voted": "A"
+      },
+      {
+        "source": "",
+        "topic": "",
+        "question": "You want to notify on-call engineers about a service degradation in production while minimizing development time.\nWhat should you do?",
+        "type": "option",
+        "choices": {
+          "A": "Use Cloud Function to monitor resources and raise alerts.",
+          "B": "Use Cloud Pub/Sub to monitor resources and raise alerts.",
+          "C": "Use Cloud Error Reporting to capture errors and raise alerts.",
+          "D": "Use Google Cloud Monitoring to monitor resources and raise alerts."
+        },
+        "answer": "D",
+        "page": 5,
+        "most_voted": "D"
+      },
+      {
+        "source": "https://chat.openai.com/share/1691f059-6f7a-4ec1-a126-46679a47013e",
+        "topic": "",
+        "question": "You are deploying your application to a Compute Engine virtual machine instance. Your application is configured to write its log files to disk. You want to view the logs in Cloud Monitoring without changing the application code.\nWhat should you do?",
+        "type": "option",
+        "choices": {
+          "A": "Install the Cloud Logging Agent and configure it to send the application logs.",
+          "B": "Use a Cloud Logging Library to log directly from the application to Cloud Logging.",
+          "C": "Provide the log file folder path in the metadata of the instance to configure it to send the application logs.",
+          "D": "Change the application to log to /var/log so that its logs are automatically sent to Cloud Logging."
+        },
+        "answer": "A",
+        "page": 4,
+        "most_voted": "A"
+      },
+      {
+        "source": "",
+        "topic": "",
+        "question": "Your service adds text to images that it reads from Cloud Storage. During busy times of the year, requests to Cloud Storage fail with an HTTP 429 \"Too Many Requests\" status code.\nHow should you handle this error?",
+        "type": "option",
+        "choices": {
+          "A": "Add a cache-control header to the objects.",
+          "B": "Request a quota increase from the GCP Console.",
+          "C": "Retry the request with a truncated exponential backoff strategy.",
+          "D": "Change the storage class of the Cloud Storage bucket to Multi-regional."
+        },
+        "answer": "C",
+        "page": 4,
+        "most_voted": "C"
+      },
+      {
+        "source": "",
+        "topic": "",
+        "question": "You are building an API that will be used by Android and iOS apps. The API must:\n* Support HTTPs\n* Minimize bandwidth cost\n* Integrate easily with mobile apps\nWhich API architecture should you use?",
+        "type": "option",
+        "choices": {
+          "A": "RESTful APIs",
+          "B": "MQTT for APIs",
+          "C": "gRPC-based APIs",
+          "D": "SOAP-based APIs"
+        },
+        "answer": "C",
+        "page": 4,
+        "most_voted": "C"
+      },
+      {
+        "source": "https://chat.openai.com/share/8e3b57ff-4917-4c84-b1d4-7157b166be22",
+        "topic": "",
+        "question": "Your application takes an input from a user and publishes it to the user's contacts. This input is stored in a table in Cloud Spanner. Your application is more sensitive to latency and less sensitive to consistency.\nHow should you perform reads from Cloud Spanner for this application?",
+        "type": "option",
+        "choices": {
+          "A": "Perform Read-Only transactions.",
+          "B": "Perform stale reads using single-read methods.",
+          "C": "Perform strong reads using single-read methods.",
+          "D": "Perform stale reads using read-write transactions."
+        },
+        "answer": "B",
+        "page": 4,
+        "most_voted": "B"
+      },
+      {
+        "source": "",
+        "topic": "",
+        "question": "Your application is deployed in a Google Kubernetes Engine (GKE) cluster. When a new version of your application is released, your CI/CD tool updates the spec.template.spec.containers[0].image value to reference the Docker image of your new application version. When the Deployment object applies the change, you want to deploy at least 1 replica of the new version and maintain the previous replicas until the new replica is healthy.\nWhich change should you make to the GKE Deployment object shown below?\n\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: ecommerce-frontend-deployment\nspec:\n  replicas: 3\n  selector:\n    matchLabels:\n      app: ecommerce-frontend\n  template:\n    metadata:\n      labels:\n        app: ecommerce-frontend\n    spec:\n      containers:\n      - name: ecommerce-frontend-webapp\n        image: ecommerce-frontend-webapp:1.7.9\n        ports:\n        - containerPort: 80",
+        "type": "option",
+        "choices": {
+          "A": "Set the Deployment strategy to RollingUpdate with maxSurge set to 0, maxUnavailable set to 1.",
+          "B": "Set the Deployment strategy to RollingUpdate with maxSurge set to 1, maxUnavailable set to 0.",
+          "C": "Set the Deployment strategy to Recreate with maxSurge set to 0, maxUnavailable set to 1.",
+          "D": "Set the Deployment strategy to Recreate with maxSurge set to 1, maxUnavailable set to 0."
+        },
+        "answer": "B",
+        "page": 0,
+        "most_voted": "B"
+      },
+      {
+        "source": "https://chat.openai.com/share/a5994f1f-f5aa-472c-9bda-47682bb4b86c",
+        "topic": "",
+        "question": "You are planning to deploy your application in a Google Kubernetes Engine (GKE) cluster. The application exposes an HTTP-based health check at /healthz. You want to use this health check endpoint to determine whether traffic should be routed to the pod by the load balancer.\nWhich code snippet should you include in your Pod configuration?",
+        "type": "option",
+        "choices": {
+          "A": "livenessProbe: \n      httpGet:\n            path: /healthz\n            port: 80",
+          "B": "readinessProbe: \n      httpGet:\n            path: /healthz\n            port: 80",
+          "C": "loadbalancerHealthCheck:\n      httpGet:\n            path: /healthz\n            port: 80",
+          "D": "healthCheck:\n      httpGet:\n            path: /healthz\n            port: 80"
+        },
+        "answer": "B",
+        "page": 8,
+        "most_voted": "B"
       }
+      
+      
+      
+      
+      
+      
   ]
 }

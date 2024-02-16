@@ -132,4 +132,3 @@ This guide outlines the steps to build your React application and deploy it to G
     ```
 
 This guide assists in deploying your React application and uploading specific files to Google Cloud Storage, ensuring your project is up-to-date and accessible.
-
