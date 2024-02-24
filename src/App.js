@@ -1,71 +1,85 @@
-import React, { useState, useEffect, useCallback  } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './App.css';
 import QuestionHandler from './features/questionHandler/QuestionHandler';
-import localExam from './examJson/GoogleCloudDigitalLeader.json'; // Import for local development
-import {transformQuestionData} from './utils/transformQuestionData';
+import { transformQuestionData } from './utils/transformQuestionData';
+import examConfig from './config/examConfig';
+import ExamSelect from './features/examSelect/ExamSelect';
 
 function App() {
-  const [examData, setExamData] = useState(null);
-
-  const handleShowAnswerToggle = useCallback((questionId, newShowAnswerValue) => {
-    console.log('Is show answer:', newShowAnswerValue);
-    console.log('questionId:', questionId);
-
-    setExamData(currentExamData => currentExamData.map(question => {
-      if (question.questionId === questionId) {
-        return { ...question, showAnswer: newShowAnswerValue };
-      }
-      return question;
+  const [examStates, setExamStates] = useState({});
+  // Initialize currentExamKey with the key of the first exam in the examConfig array
+  const [currentExamKey, setCurrentExamKey] = useState(examConfig[0].key);
+  const handleExamChange = useCallback((newExamKey) => {
+    setCurrentExamKey(newExamKey);
+  }, []);
+  const handleShowAnswerToggle = useCallback((examKey, questionId, newShowAnswerValue) => {
+    setExamStates(currentStates => ({
+      ...currentStates,
+      [examKey]: currentStates[examKey].map(question => {
+        if (question.questionId === questionId) {
+          return { ...question, showAnswer: newShowAnswerValue };
+        }
+        return question;
+      })
     }));
+  }, []);
 
-  }, []); // Dependency array is empty, indicating this callback doesn't depend on anything to be recreated
-
-  // Add this function inside your App component
-  const handleOptionChange = useCallback((questionId, newSelectedOptions) => {
-    setExamData(currentExamData => currentExamData.map(question => {
-      if (question.questionId === questionId) {
-        // Update the question's selectedOptions with the newSelectedOptions
-        return { ...question, userSelectedChoices: newSelectedOptions };
-      }
-      return question;
+  const handleOptionChange = useCallback((examKey, questionId, newSelectedOptions) => {
+    setExamStates(currentStates => ({
+      ...currentStates,
+      [examKey]: currentStates[examKey].map(question => {
+        if (question.questionId === questionId) {
+          return { ...question, userSelectedChoices: newSelectedOptions };
+        }
+        return question;
+      })
     }));
-  }, []); // Since this callback does not depend on any external variables, the dependency array is empty
-
+  }, []);
 
   useEffect(() => {
-    // This effect only fetches and transforms data once or under specific conditions
-    const fetchData = async () => {
+    const fetchData = async (examKey, path, url) => {
+      if (examStates[examKey]) return;
+
       let sortedQuestions;
       if (process.env.NODE_ENV === 'development') {
-        sortedQuestions = localExam.exam_questions.sort((a, b) => b.page - a.page);
+        const module = await import(`${path}`);
+        sortedQuestions = module.default.exam_questions.sort((a, b) => b.page - a.page);
       } else {
-        const response = await fetch('https://exam-bucket-test1.storage.googleapis.com/exam.json');
+        const response = await fetch(url);
         const data = await response.json();
         sortedQuestions = data.exam_questions.sort((a, b) => b.page - a.page);
       }
-      setExamData(transformQuestionData(sortedQuestions));
-    };
-  
-    fetchData();
-  }, []); // Empty dependency array ensures this runs once on mount
 
-  // UseEffect hook for logging changes to examData
-  useEffect(() => {
-    if (examData) {
-      console.log('Exam data has been transformed and set:', examData);
+      const transformedData = transformQuestionData(sortedQuestions);
+      setExamStates(currentStates => ({
+        ...currentStates,
+        [examKey]: transformedData
+      }));
+    };
+
+    if (currentExamKey) {
+      const examConfigItem = examConfig.find(exam => exam.key === currentExamKey);
+      if (examConfigItem) {
+        fetchData(currentExamKey, examConfigItem.path, examConfigItem.url);
+      }
     }
-  }, [examData]); // This effect depends on examData, so it runs whenever examData changes
+  }, [currentExamKey, examStates]);
 
   return (
-    <div className="App">
-      {examData ? 
+    <>
+      <ExamSelect 
+        examConfig={examConfig} 
+        currentExamKey={currentExamKey} 
+        onExamChange={handleExamChange} 
+      />
+      {currentExamKey && examStates[currentExamKey] ? 
         <QuestionHandler 
-          questions={examData} 
-          onShowAnswerToggle={handleShowAnswerToggle} 
-          onUserSelectionChange={handleOptionChange}
+          questions={examStates[currentExamKey]} 
+          onShowAnswerToggle={(questionId, newShowAnswerValue) => handleShowAnswerToggle(currentExamKey, questionId, newShowAnswerValue)} 
+          onUserSelectionChange={(questionId, newSelectedOptions) => handleOptionChange(currentExamKey, questionId, newSelectedOptions)}
         /> 
         : <div>Loading exam questions...</div>}
-    </div>
+    </>
   );
 }
 
