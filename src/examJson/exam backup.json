@@ -370,7 +370,7 @@
           "most_voted": ""
       },
       {
-          "question": "Your teammate has asked you to review the code below, which is adding a credit to an account balance in Cloud Datastore. Which improvement should you suggest your teammate make?<codeblock>\npublic Entity creditAccount (long accountId, long creditAmount) {\nEntity account = datastore.get\n(keyFactory.newKey (accountId));\naccount = Entity.builder (account).set( \"balance\", account.getLong (\"balance\") + creditAmount).build()\ndatastore.put (account);\nreturn account;\n}</codeblock>",
+          "question": "Your teammate has asked you to review the code below, which is adding a credit to an account balance in Cloud Datastore. Which improvement should you suggest your teammate make?\n\npublic Entity creditAccount (long accountId, long creditAmount) {\nEntity account = datastore.get\n(keyFactory.newKey (accountId));\naccount = Entity.builder (account).set( \"balance\", account.getLong (\"balance\") + creditAmount).build()\ndatastore.put (account);\nreturn account;\n}",
           "type": "option",
           "topic": "https://chat.openai.com/share/3b7c977c-c3eb-45a7-983d-9939c8412d35",
           "choices": {
@@ -1329,7 +1329,7 @@
           "most_voted": "A"
       },
       {
-          "question": "You are configuring a continuous integration pipeline using Cloud Build to automate the deployment of new container images to Google Kubernetes Engine (GKE). The pipeline builds the application from its source code, runs unit and integration tests in separate steps, and pushes the container to Container Registry. The application runs on a Python web server.\n\nThe Dockerfile is as follows:<codeblock>\n```\nFROM python:3.7-alpine -\n\nCOPY . /app -\n\nWORKDIR /app -\nRUN pip install -r requirements.txt\nCMD [ \"gunicorn\", \"-w 4\", \"main:app\" ]\n```\n</codeblock>You notice that Cloud Build runs are taking longer than expected to complete. You want to decrease the build time. What should you do? (Choose two.)",
+          "question": "You are configuring a continuous integration pipeline using Cloud Build to automate the deployment of new container images to Google Kubernetes Engine (GKE). The pipeline builds the application from its source code, runs unit and integration tests in separate steps, and pushes the container to Container Registry. The application runs on a Python web server.\n\nThe Dockerfile is as follows:\n\n```\nFROM python:3.7-alpine -\n\nCOPY . /app -\n\nWORKDIR /app -\nRUN pip install -r requirements.txt\nCMD [ \"gunicorn\", \"-w 4\", \"main:app\" ]\n```\n\nYou notice that Cloud Build runs are taking longer than expected to complete. You want to decrease the build time. What should you do? (Choose two.)",
           "type": "multiple_choice",
           "source": "https://chat.openai.com/share/07f6243b-05a1-4ffe-9a3f-2fdacf2eac07",
           "topic": "https://chat.openai.com/share/3b7c977c-c3eb-45a7-983d-9939c8412d35",
@@ -2559,8 +2559,7 @@
       {
           "question": "You are developing a new web application using Cloud Run and committing code to Cloud Source Repositories. You want to deploy new code in the most efficient way possible. You have already created a Cloud Build YAML file that builds a container and runs the following command: gcloud run deploy. What should you do next?",
           "type": "option",
-          "source": "https://chat.openai.com/share/691b4f08-b22b-4444-8245-744e1e77d8af",
-          "diagram": "https://diagrams.helpful.dev/d/d:QBJTOhW2",
+          "source": "https://chat.openai.com/share/0d629ada-bbb9-47f4-81d4-557f2ec16e84",
           "choices": {
               "A": "Create a Pub/Sub topic to be notified when code is pushed to the repository. Create a Pub/Sub trigger that runs the build file when an event is published to the topic.",
               "B": "Create a build trigger that runs the build file in response to a repository code being pushed to the development branch.",
@@ -2574,8 +2573,7 @@
       {
           "question": "You are a developer at a large organization. You are deploying a web application to Google Kubernetes Engine (GKE). The DevOps team has built a CI/CD pipeline that uses Cloud Deploy to deploy the application to Dev, Test, and Prod clusters in GKE. After Cloud Deploy successfully deploys the application to the Dev cluster, you want to automatically promote it to the Test cluster. How should you configure this process following Google-recommended best practices?",
           "type": "option",
-          "source": "https://chat.openai.com/share/f290e88b-4781-4544-ac3a-948f6e32928d",
-          "diagram": "https://diagrams.helpful.dev/d/d:fz08n7JT",
+          "source": "https://chat.openai.com/share/a9e49a6a-5ed7-46c7-a5fa-b6d0b2f606d6",
           "choices": {
               "A": "1. Create a Cloud Build trigger that listens for SUCCEEDED Pub/Sub messages from the clouddeploy-operations topic.\n2. Configure Cloud Build to include a step that promotes the application to the Test cluster.",
               "B": "1. Create a Cloud Function that calls the Google Cloud Deploy API to promote the application to the Test cluster.\n2. Configure this function to be triggered by SUCCEEDED Pub/Sub messages from the cloud-builds topic.",
@@ -2636,8 +2634,7 @@
       {
           "question": "Your team is developing a Cloud Function triggered by Cloud Storage events. You want to accelerate testing and development of your Cloud Function while following Google-recommended best practices. What should you do?",
           "type": "option",
-          "source": "https://chat.openai.com/share/886d03fa-5653-4d05-b1fa-d6f30e7d0ef4",
-          "diagram": "https://diagrams.helpful.dev/d/d:RD4urXvI",
+          "source": "https://chat.openai.com/share/16de7531-ea82-427f-b403-5bed3f091670",
           "choices": {
               "A": "Create a new Cloud Function that is triggered when Cloud Audit Logs detects the cloudfunctions.functions.sourceCodeSet operation in the original Cloud Function. Send mock requests to the new function to evaluate the functionality.",
               "B": "Make a copy of the Cloud Function, and rewrite the code to be HTTP-triggered. Edit and test the new version by triggering the HTTP endpoint. Send mock requests to the new function to evaluate the functionality.",
@@ -2721,8 +2718,7 @@
       {
           "question": "You need to deploy an internet-facing microservices application to Google Kubernetes Engine (GKE). You want to validate new features using the A/B testing method. You have the following requirements for deploying new container image releases: \u2022 There is no downtime when new container images are deployed. \u2022 New production releases are tested and verified using a subset of production users. What should you do?",
           "type": "option",
-          "source": "https://chat.openai.com/share/98583cba-972b-4ac9-8ae3-e92c674c1727",
-          "diagram": "https://diagrams.helpful.dev/d/d:BMyhhrwO",
+          "source": "https://chat.openai.com/share/ed8b11f6-578b-49f6-bdde-5f4df447c16f",
           "choices": {
               "A": "1. Configure your CI/CD pipeline to update the Deployment manifest file by replacing the container version with the latest version.\n2. Recreate the Pods in your cluster by applying the Deployment manifest file.\n3. Validate the application's performance by comparing its functionality with the previous release version, and roll back if an issue arises.",
               "B": "1. Create a second namespace on GKE for the new release version.\n2. Create a Deployment configuration for the second namespace with the desired number of Pods.\n3. Deploy new container versions in the second namespace.\n4. Update the Ingress configuration to route traffic to the namespace with the new container versions.",
@@ -2736,7 +2732,7 @@
       {
           "question": "Your team manages a large Google Kubernetes Engine (GKE) cluster. Several application teams currently use the same namespace to develop microservices for the cluster. Your organization plans to onboard additional teams to create microservices. You need to configure multiple environments while ensuring the security and optimal performance of each team\u2019s work. You want to minimize cost and follow Google-recommended best practices. What should you do?",
           "type": "option",
-          "source": "https://chat.openai.com/share/fbb02362-a506-4552-bbae-9497b17785ec",
+          "source": "https://chat.openai.com/share/9d6c42c2-f0fa-44cb-8b7a-f233d196456b",
           "choices": {
               "A": "Create new role-based access controls (RBAC) for each team in the existing cluster, and define resource quotas.",
               "B": "Create a new namespace for each environment in the existing cluster, and define resource quotas.",
@@ -2807,7 +2803,7 @@
       {
           "question": "You plan to deploy a new Go application to Cloud Run. The source code is stored in Cloud Source Repositories. You need to configure a fully managed, automated, continuous deployment pipeline that runs when a source code commit is made. You want to use the simplest deployment solution. What should you do?",
           "type": "option",
-          "source": "https://chat.openai.com/share/1f3433d0-2920-4f17-9b56-bd50a8387a10",
+          "source": "https://chat.openai.com/share/55f85394-44ac-4af3-a858-befbfbca5d62",
           "gpt": "https://chat.openai.com/c/7afba238-4117-4223-b4a1-295794898ece",
           "choices": {
               "A": "Configure a cron job on your workstations to periodically run gcloud run deploy --source in the working directory.",
@@ -2815,7 +2811,7 @@
               "C": "Configure continuous deployment of new revisions from a source repository for Cloud Run using buildpacks.",
               "D": "Use Cloud Build with a trigger configured to run the container build and deploy process for each source code commit to Cloud Source Repositories."
           },
-          "answer": "C",
+          "answer": "D",
           "most_voted": "D",
           "page": 49
       },
@@ -2835,7 +2831,7 @@
           "most_voted": "C"
       },
       {
-          "question": "You are deploying a Python application to Cloud Run using Cloud Source Repositories and Cloud Build. The Cloud Build pipeline is shown below:<codeblock>\nsteps:\n  - name: 'python'\n    entrypoint: 'pip'\n    args: [\"install\", \"-r\", \"requirements.txt\", \"--user\"]\n  - name: 'gcr.io/cloud-builders/docker'\n    args: ['build', '-t', 'us-central1-docker.pkg.dev/${PROJECT_ID}/${_REPO_NAME}/myimage:${SHORT_SHA}']\n  - name: 'gcr.io/cloud-builders/docker'\n    args: ['push', 'us-central1-docker.pkg.dev/${PROJECT_ID}/${_REPO_NAME}/myimage:${SHORT_SHA}']\n  - name: 'google/cloud-sdk'\n    args: ['gcloud', 'run', 'deploy', 'helloworld-${SHORT_SHA}',\n           '--image=us-central1-docker.pkg.dev/${PROJECT_ID}/${_REPO_NAME}/myimage:${SHORT_SHA}',\n           '--region', 'us-central1', '--platform', 'managed',\n           '--allow-unauthenticated']</codeblock>\nYou want to optimize deployment times and avoid unnecessary steps. What should you do?",
+          "question": "You are deploying a Python application to Cloud Run using Cloud Source Repositories and Cloud Build. The Cloud Build pipeline is shown below:\n\nsteps:\n  - name: 'python'\n    entrypoint: 'pip'\n    args: [\"install\", \"-r\", \"requirements.txt\", \"--user\"]\n  - name: 'gcr.io/cloud-builders/docker'\n    args: ['build', '-t', 'us-central1-docker.pkg.dev/${PROJECT_ID}/${_REPO_NAME}/myimage:${SHORT_SHA}']\n  - name: 'gcr.io/cloud-builders/docker'\n    args: ['push', 'us-central1-docker.pkg.dev/${PROJECT_ID}/${_REPO_NAME}/myimage:${SHORT_SHA}']\n  - name: 'google/cloud-sdk'\n    args: ['gcloud', 'run', 'deploy', 'helloworld-${SHORT_SHA}',\n           '--image=us-central1-docker.pkg.dev/${PROJECT_ID}/${_REPO_NAME}/myimage:${SHORT_SHA}',\n           '--region', 'us-central1', '--platform', 'managed',\n           '--allow-unauthenticated']\n\nYou want to optimize deployment times and avoid unnecessary steps. What should you do?",
           "type": "option",
           "source": "https://chat.openai.com/share/9e8e7d4f-807f-45b4-b352-0ada023e023b",
           "gcp": "https://chat.openai.com/c/0a7bbf67-91a1-45e2-bb54-e67230d34376",
@@ -2867,7 +2863,7 @@
       {
           "question": "You have an application running on Google Kubernetes Engine (GKE). The application is currently using a logging library and is outputting to standard output. You need to export the logs to Cloud Logging, and you need the logs to include metadata about each request. You want to use the simplest method to accomplish this. What should you do?",
           "type": "option",
-          "source": "https://chat.openai.com/share/54e64357-10c9-4920-b8d9-98dfa77153ce",
+          "source": "https://chat.openai.com/share/8f7f2aa8-3ab0-464f-967e-443e44872de7",
           "gpt": "https://chat.openai.com/c/0a7bbf67-91a1-45e2-bb54-e67230d34376",
           "choices": {
               "A": "Change your application\u2019s logging library to the Cloud Logging library, and configure your application to export logs to Cloud Logging.",
@@ -2875,7 +2871,7 @@
               "C": "Update your application to output logs in CSV format, and add the necessary metadata to the CSV.",
               "D": "Install the Fluent Bit agent on each of your GKE nodes, and have the agent export all logs from /var/log."
           },
-          "answer": "A",
+          "answer": "B",
           "most_voted": "A",
           "page": 50
       },
@@ -3086,7 +3082,7 @@
       {
           "question": "You are developing a new application. You want the application to be triggered only when a given file is updated in your Cloud Storage bucket. Your trigger might change, so your process must support different types of triggers. You want the configuration to be simple so that multiple team members can update the triggers in the future. What should you do?",
           "type": "option",
-          "source": "https://chat.openai.com/share/15f624ac-55bf-447b-b099-3227cc944f4c",
+          "source": "https://chat.openai.com/share/db4ebd99-442d-4d37-b812-071cd23a7a1f",
           "gpt": "https://chat.openai.com/c/4a92064a-d29b-4e1c-a34c-f46f10a695bc",
           "choices": {
               "A": "Configure Cloud Storage events to be sent to Pub/Sub, and use Pub/Sub events to trigger a Cloud Build job that executes your application.",
@@ -3519,7 +3515,7 @@
           "most_voted": ""
       },
       {
-          "source": "https://chat.openai.com/share/a4054827-0566-476b-bf13-d5cdfbd905a2",
+          "source": "https://chat.openai.com/share/abf1a755-aed0-4714-a1ac-9207938f38af",
           "topic": "https://chat.openai.com/share/abf1a755-aed0-4714-a1ac-9207938f38af",
           "question": "You are developing a flower ordering application. Currently you have three microservices: Order Service (receives the orders), Order Fulfillment Service (processes the orders), Notification Service (notifies the customer when the order is filled). You need to determine how the services will communicate with each other. You want incoming orders to be processed quickly and you need to collect order information for fulfillment. You also want to make sure orders are not lost between your services and are able to communicate asynchronously. How should the requests be processed?",
           "type": "option",
@@ -3552,7 +3548,7 @@
           "most_voted": "D"
       },
       {
-          "source": "https://chat.openai.com/share/4bdbdb1f-b3f4-4b73-a92d-807f1a1556c4",
+          "source": "https://chat.openai.com/share/11e80d0f-33d9-4e10-ad8b-74002568c316",
           "topic": "https://chat.openai.com/c/2947b2bd-cddb-4ab1-b067-01e88ff9c48c",
           "question": "You recently developed an application that monitors a large number of stock price. You need to configure Pub/Sub to receive a high volume of messages and update the current stock price in a single large in-memory database. A downstream service needs the most up-to-date prices in the in-memory database to perform stock trading transactions. Each message contains three pieces of information:\n\u2022 Stock symbol\n\u2022 Stock price\n\u2022 Timestamp for the update\n\nHow should you set up your Pub/Sub subscription?",
           "type": "option",
@@ -3562,7 +3558,7 @@
               "C": "Create a push subscription with exactly-once delivery enabled.",
               "D": "Create a pull subscription with both ordering and exactly-once delivery turned off."
           },
-          "answer": "A",
+          "answer": "B",
           "page": 56,
           "most_voted": "A OR B"
       },
@@ -3663,7 +3659,7 @@
         "type": "option",
         "choices": {
           "A": "Smoke tests",
-          "B": "Stackdriver uptime checks",
+          "B": "Cloud Monitoring",
           "C": "Cloud Load Balancing - health checks",
           "D": "Managed instance group - health checks"
         },
@@ -3719,11 +3715,11 @@
       {
         "source": "https://chat.openai.com/share/c5584446-ea38-4298-9970-c222f576aa63",
         "topic": "",
-        "question": "Your application is logging to Stackdriver. You want to get the count of all requests on all /api/alpha/* endpoints. What should you do?",
+        "question": "Your application is logging to Google Cloud Logging. You want to get the count of all requests on all /api/alpha/* endpoints. What should you do?",
         "type": "option",
         "choices": {
-          "A": "Add a Stackdriver counter metric for path:/api/alpha/.",
-          "B": "Add a Stackdriver counter metric for endpoint:/api/alpha/*",
+          "A": "Create a Google Cloud Monitoring custom metric with a filter for httpRequest.path:/api/alpha/.",
+          "B": "Create a Google Cloud Monitoring custom metric with a filter for resource.labels.endpoint=\"/api/alpha/*\".",
           "C": "Export the logs to Google Cloud Storage and count lines matching /api/alpha/* using a data processing tool.",
           "D": "Export the logs to Google Cloud Pub/Sub and count messages matching /api/alpha/* using a subscriber application."
         },
@@ -3779,7 +3775,7 @@
       {
         "source": "",
         "topic": "",
-        "question": "You are creating a Google Kubernetes Engine (GKE) cluster and run this command:<codeblock>\ngcloud container clusters create large-cluster --num-nodes 200\n</codeblock>The command fails with the error:<codeblock>\ninsufficient regional quota to satisfy request: resource \"CPUS\": \nrequest requires '200.0' and is short '176.0'. project has a quota of '24.0' with '24.0' available\n</codeblock>You want to resolve the issue. What should you do?",
+        "question": "You are creating a Google Kubernetes Engine (GKE) cluster and run this command:\n\ngcloud container clusters create large-cluster --num-nodes 200\n\nThe command fails with the error:\n\ninsufficient regional quota to satisfy request: resource \"CPUS\": request requires '200.0' and is short '176.0'. project has a quota of '24.0' with '24.0' available\n\nYou want to resolve the issue. What should you do?",
         "type": "option",
         "choices": {
           "A": "Request additional GKE quota in the GCP Console.",
@@ -3929,7 +3925,7 @@
       {
         "source": "",
         "topic": "",
-        "question": "Your application is deployed in a Google Kubernetes Engine (GKE) cluster. When a new version of your application is released, your CI/CD tool updates the spec.template.spec.containers[0].image value to reference the Docker image of your new application version. When the Deployment object applies the change, you want to deploy at least 1 replica of the new version and maintain the previous replicas until the new replica is healthy.\nWhich change should you make to the GKE Deployment object shown below?<codeblock>\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: ecommerce-frontend-deployment\nspec:\n  replicas: 3\n  selector:\n    matchLabels:\n      app: ecommerce-frontend\n  template:\n    metadata:\n      labels:\n        app: ecommerce-frontend\n    spec:\n      containers:\n      - name: ecommerce-frontend-webapp\n        image: ecommerce-frontend-webapp:1.7.9\n        ports:\n        - containerPort: 80 </codeblock>",
+        "question": "Your application is deployed in a Google Kubernetes Engine (GKE) cluster. When a new version of your application is released, your CI/CD tool updates the spec.template.spec.containers[0].image value to reference the Docker image of your new application version. When the Deployment object applies the change, you want to deploy at least 1 replica of the new version and maintain the previous replicas until the new replica is healthy.\nWhich change should you make to the GKE Deployment object shown below?\n\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: ecommerce-frontend-deployment\nspec:\n  replicas: 3\n  selector:\n    matchLabels:\n      app: ecommerce-frontend\n  template:\n    metadata:\n      labels:\n        app: ecommerce-frontend\n    spec:\n      containers:\n      - name: ecommerce-frontend-webapp\n        image: ecommerce-frontend-webapp:1.7.9\n        ports:\n        - containerPort: 80",
         "type": "option",
         "choices": {
           "A": "Set the Deployment strategy to RollingUpdate with maxSurge set to 0, maxUnavailable set to 1.",
@@ -3959,14 +3955,22 @@
       {
         "source": "https://chat.openai.com/g/g-wy9QVYjt7-question-analyzer/c/2a29a071-cf2b-462c-821a-7738c9f1eab3",
         "topic": "",
-        "question": "Your application is deployed in a Google Kubernetes Engine (GKE) cluster. When a new version of your application is released, your CI/CD tool updates the spec.template.spec.containers[0].image value to reference the Docker image of your new application version. When the Deployment object applies the change, you want to deploy at least 1 replica of the new version and maintain the previous replicas until the new replica is healthy.\nWhich change should you make to the GKE Deployment object shown below?<codeblock>\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: ecommerce-frontend-deployment\nspec:\n  replicas: 3\n  selector:\n    matchLabels:\n      app: ecommerce-frontend\n  template:\n    metadata:\n      labels:\n        app: ecommerce-frontend\n    spec:\n      containers:\n      - name: ecommerce-frontend-webapp\n        image: ecommerce-frontend-webapp:1.7.9\n        ports:\n        - containerPort: 80</codeblock>",
+        "question": "Your application is deployed in a Google Kubernetes Engine (GKE) cluster. When a new version of your application is released, your CI/CD tool updates the spec.template.spec.containers[0].image value to reference the Docker image of your new application version. When the Deployment object applies the change, you want to deploy at least 1 replica of the new version and maintain the previous replicas until the new replica is healthy.\\nWhich change should you make to the GKE Deployment object shown below?\\n'apiVersion: apps/v1\\n'kind: Deployment\\n'metadata:\\n  name: ecommerce-frontend-deployment\\n'spec:\\n  replicas: 3\\n  selector:\\n    matchLabels:\\n      app: ecommerce-frontend\\n  template:\\n    metadata:\\n      labels:\\n        app: ecommerce-frontend\\n    spec:\\n      containers:\\n      - name: ecommerce-frontend-webapp\\n        image: ecommerce-frontend-webapp:1.7.9\\n        ports:\\n        - containerPort: 80",
         "type": "option",
-        "choices": {
-          "A": "Set the Deployment strategy to RollingUpdate with maxSurge set to 0, maxUnavailable set to 1.",
-          "B": "Set the Deployment strategy to RollingUpdate with maxSurge set to 1, maxUnavailable set to 0.",
-          "C": "Set the Deployment strategy to Recreate with maxSurge set to 0, maxUnavailable set to 1.",
-          "D": "Set the Deployment strategy to Recreate with maxSurge set to 1, maxUnavailable set to 0."
-        },
+        "choices": [
+          {
+            "A": "Set the Deployment strategy to RollingUpdate with maxSurge set to 0, maxUnavailable set to 1."
+          },
+          {
+            "B": "Set the Deployment strategy to RollingUpdate with maxSurge set to 1, maxUnavailable set to 0."
+          },
+          {
+            "C": "Set the Deployment strategy to Recreate with maxSurge set to 0, maxUnavailable set to 1."
+          },
+          {
+            "D": "Set the Deployment strategy to Recreate with maxSurge set to 1, maxUnavailable set to 0."
+          }
+        ],
         "answer": "B",
         "page": 4,
         "most_voted": "B"
@@ -3974,14 +3978,22 @@
       {
         "source": "https://chat.openai.com/g/g-wy9QVYjt7-question-analyzer/c/bce4daeb-87d3-448f-bd40-95f6262555e1",
         "topic": "",
-        "question": "You need to migrate an internal file upload API with an enforced 500-MB file size limit to App Engine.\nWhat should you do?",
+        "question": "You need to migrate an internal file upload API with an enforced 500-MB file size limit to App Engine.\\nWhat should you do?",
         "type": "option",
-        "choices": {
-          "A": "Use FTP to upload files.",
-          "B": "Use CPanel to upload files.",
-          "C": "Use signed URLs to upload files.",
-          "D": "Change the API to be a multipart file upload API."
-        },
+        "choices": [
+          {
+            "A": "Use FTP to upload files."
+          },
+          {
+            "B": "Use CPanel to upload files."
+          },
+          {
+            "C": "Use signed URLs to upload files."
+          },
+          {
+            "D": "Change the API to be a multipart file upload API."
+          }
+        ],
         "answer": "C",
         "page": 3,
         "most_voted": "C"
@@ -3989,14 +4001,22 @@
       {
         "source": "https://chat.openai.com/share/f462099e-6d5a-46d8-a461-5f9268359987",
         "topic": "",
-        "question": "Your teammate has asked you to review the code below. Its purpose is to efficiently add a large number of small rows to a BigQuery table.<codeblock>\nBigQuery service = BigQueryOptions.newBuilder().build().getService();\n\npublic void writeToBigQuery(Collection<Map<String, String>> rows) {\n\tfor (Map<String, String> row : rows) {\n\t\tInsertAllRequest insertRequest = InsertAllRequest.newBuilder(\"datasetId\", \"tableId\",\n\t\t\t\tInsertAllRequest.RowToInsert.of(row)).build();\n\n\t\tservice.insertAll(insertRequest);\n\t}\n}</codeblock>\nWhich improvement should you suggest your teammate make?",
+        "question": "Your teammate has asked you to review the code below. Its purpose is to efficiently add a large number of small rows to a BigQuery table.\\nBigQuery service = BigQueryOptions.newBuilder().build().getService();\\n\\npublic void writeToBigQuery(Collection<Map<String, String>> rows) {\\n\tfor (Map<String, String> row : rows) {\\n\t\tInsertAllRequest insertRequest = InsertAllRequest.newBuilder(\"datasetId\", \"tableId\",\\n\t\t\t\tInsertAllRequest.RowToInsert.of(row)).build();\\n\\t\\tservice.insertAll(insertRequest);\\n\t}\\n}\\nWhich improvement should you suggest your teammate make?",
         "type": "option",
-        "choices": {
-          "A": "Include multiple rows with each request.",
-          "B": "Perform the inserts in parallel by creating multiple threads.",
-          "C": "Write each row to a Cloud Storage object, then load into BigQuery.",
-          "D": "Write each row to a Cloud Storage object in parallel, then load into BigQuery."
-        },
+        "choices": [
+          {
+            "A": "Include multiple rows with each request."
+          },
+          {
+            "B": "Perform the inserts in parallel by creating multiple threads."
+          },
+          {
+            "C": "Write each row to a Cloud Storage object, then load into BigQuery."
+          },
+          {
+            "D": "Write each row to a Cloud Storage object in parallel, then load into BigQuery."
+          }
+        ],
         "answer": "A",
         "page": 3,
         "most_voted": "A"
@@ -4004,14 +4024,22 @@
       {
         "source": "https://chat.openai.com/share/f3fd7fc8-5f40-4d6c-963c-c9071fa8bbc1",
         "topic": "",
-        "question": "You are developing a JPEG image-resizing API hosted on Google Kubernetes Engine (GKE). Callers of the service will exist within the same GKE cluster. You want clients to be able to get the IP address of the service.\nWhat should you do?",
+        "question": "You are developing a JPEG image-resizing API hosted on Google Kubernetes Engine (GKE). Callers of the service will exist within the same GKE cluster. You want clients to be able to get the IP address of the service.\\nWhat should you do?",
         "type": "option",
-        "choices": {
-          "A": "Define a GKE Service. Clients should use the name of the A record in Cloud DNS to find the service's cluster IP address.",
-          "B": "Define a GKE Service. Clients should use the service name in the URL to connect to the service.",
-          "C": "Define a GKE Endpoint. Clients should get the endpoint name from the appropriate environment variable in the client container.",
-          "D": "Define a GKE Endpoint. Clients should get the endpoint name from Cloud DNS."
-        },
+        "choices": [
+          {
+            "A": "Define a GKE Service. Clients should use the name of the A record in Cloud DNS to find the service's cluster IP address."
+          },
+          {
+            "B": "Define a GKE Service. Clients should use the service name in the URL to connect to the service."
+          },
+          {
+            "C": "Define a GKE Endpoint. Clients should get the endpoint name from the appropriate environment variable in the client container."
+          },
+          {
+            "D": "Define a GKE Endpoint. Clients should get the endpoint name from Cloud DNS."
+          }
+        ],
         "answer": "B",
         "page": 3,
         "most_voted": "B"
@@ -4019,14 +4047,22 @@
       {
         "source": "https://chat.openai.com/g/g-wy9QVYjt7-question-analyzer/c/bf868239-ffd4-45df-9959-3a66d38a2bc3",
         "topic": "",
-        "question": "You are using Cloud Build to build and test application source code stored in Cloud Source Repositories. The build process requires a build tool not available in the Cloud Build environment.\nWhat should you do?",
+        "question": "You are using Cloud Build to build and test application source code stored in Cloud Source Repositories. The build process requires a build tool not available in the Cloud Build environment.\\nWhat should you do?",
         "type": "option",
-        "choices": {
-          "A": "Download the binary from the internet during the build process.",
-          "B": "Build a custom cloud builder image and reference the image in your build steps.",
-          "C": "Include the binary in your Cloud Source Repositories repository and reference it in your build scripts.",
-          "D": "Ask to have the binary added to the Cloud Build environment by filing a feature request against the Cloud Build public Issue Tracker."
-        },
+        "choices": [
+          {
+            "A": "Download the binary from the internet during the build process."
+          },
+          {
+            "B": "Build a custom cloud builder image and reference the image in your build steps."
+          },
+          {
+            "C": "Include the binary in your Cloud Source Repositories repository and reference it in your build scripts."
+          },
+          {
+            "D": "Ask to have the binary added to the Cloud Build environment by filing a feature request against the Cloud Build public Issue Tracker."
+          }
+        ],
         "answer": "B",
         "page": 3,
         "most_voted": "B"
@@ -4034,14 +4070,22 @@
       {
         "source": "https://chat.openai.com/share/348dd5c2-7bdd-4d76-aae3-74c6f7ff3d56",
         "topic": "",
-        "question": "You need to copy directory local-scripts and all of its contents from your local workstation to a Compute Engine virtual machine instance.\nWhich command should you use?",
+        "question": "You need to copy directory local-scripts and all of its contents from your local workstation to a Compute Engine virtual machine instance.\\nWhich command should you use?",
         "type": "option",
-        "choices": {
-          "A": "gsutil cp --project \"my-gcp-project\" -r ~/local-scripts/ gcp-instance-name:~/server-scripts/ --zone \"us-east1-b\"",
-          "B": "gsutil cp --project \"my-gcp-project\" -R ~/local-scripts/ gcp-instance-name:~/server-scripts/ --zone \"us-east1-b\"",
-          "C": "gcloud compute scp --project \"my-gcp-project\" --recurse ~/local-scripts/ gcp-instance-name:~/server-scripts/ --zone \"us-east1-b\"",
-          "D": "gcloud compute mv --project \"my-gcp-project\" --recurse ~/local-scripts/ gcp-instance-name:~/server-scripts/ --zone \"us-east1-b\""
-        },
+        "choices": [
+          {
+            "A": "gsutil cp --project \"my-gcp-project\" -r ~/local-scripts/ gcp-instance-name:~/server-scripts/ --zone \"us-east1-b\""
+          },
+          {
+            "B": "gsutil cp --project \"my-gcp-project\" -R ~/local-scripts/ gcp-instance-name:~/server-scripts/ --zone \"us-east1-b\""
+          },
+          {
+            "C": "gcloud compute scp --project \"my-gcp-project\" --recurse ~/local-scripts/ gcp-instance-name:~/server-scripts/ --zone \"us-east1-b\""
+          },
+          {
+            "D": "gcloud compute mv --project \"my-gcp-project\" --recurse ~/local-scripts/ gcp-instance-name:~/server-scripts/ --zone \"us-east1-b\""
+          }
+        ],
         "answer": "C",
         "page": 2,
         "most_voted": "C"
@@ -4049,14 +4093,22 @@
       {
         "source": "https://chat.openai.com/c/ba493630-cbea-4487-91df-b299369d34af",
         "topic": "",
-        "question": "You are deploying your application to a Compute Engine virtual machine instance with the Stackdriver Monitoring Agent installed. Your application is a unix process on the instance. You want to be alerted if the unix process has not run for at least 5 minutes. You are not able to change the application to generate metrics or logs.\nWhich alert condition should you configure?",
+        "question": "You are deploying your application to a Compute Engine virtual machine instance with the Stackdriver Monitoring Agent installed. Your application is a unix process on the instance. You want to be alerted if the unix process has not run for at least 5 minutes. You are not able to change the application to generate metrics or logs.\\nWhich alert condition should you configure?",
         "type": "option",
-        "choices": {
-          "A": "Uptime check",
-          "B": "Process health",
-          "C": "Metric absence",
-          "D": "Metric threshold"
-        },
+        "choices": [
+          {
+            "A": "Uptime check"
+          },
+          {
+            "B": "Process health"
+          },
+          {
+            "C": "Metric absence"
+          },
+          {
+            "D": "Metric threshold"
+          }
+        ],
         "answer": "C",
         "page": 2,
         "most_voted": "B"
@@ -4064,14 +4116,22 @@
       {
         "source": "",
         "topic": "",
-        "question": "You have two tables in an ANSI-SQL compliant database with identical columns that you need to quickly combine into a single table, removing duplicate rows from the result set.\nWhat should you do?",
+        "question": "You have two tables in an ANSI-SQL compliant database with identical columns that you need to quickly combine into a single table, removing duplicate rows from the result set.\\nWhat should you do?",
         "type": "option",
-        "choices": {
-          "A": "Use the JOIN operator in SQL to combine the tables.",
-          "B": "Use nested WITH statements to combine the tables.",
-          "C": "Use the UNION operator in SQL to combine the tables.",
-          "D": "Use the UNION ALL operator in SQL to combine the tables."
-        },
+        "choices": [
+          {
+            "A": "Use the JOIN operator in SQL to combine the tables."
+          },
+          {
+            "B": "Use nested WITH statements to combine the tables."
+          },
+          {
+            "C": "Use the UNION operator in SQL to combine the tables."
+          },
+          {
+            "D": "Use the UNION ALL operator in SQL to combine the tables."
+          }
+        ],
         "answer": "C",
         "page": 2,
         "most_voted": "C"
@@ -4079,14 +4139,22 @@
       {
         "source": "",
         "topic": "",
-        "question": "You have an application deployed in production. When a new version is deployed, some issues don't arise until the application receives traffic from users in production. You want to reduce both the impact and the number of users affected.\nWhich deployment strategy should you use?",
+        "question": "You have an application deployed in production. When a new version is deployed, some issues don't arise until the application receives traffic from users in production. You want to reduce both the impact and the number of users affected.\\nWhich deployment strategy should you use?",
         "type": "option",
-        "choices": {
-          "A": "Blue/green deployment",
-          "B": "Canary deployment",
-          "C": "Rolling deployment",
-          "D": "Recreate deployment"
-        },
+        "choices": [
+          {
+            "A": "Blue/green deployment"
+          },
+          {
+            "B": "Canary deployment"
+          },
+          {
+            "C": "Rolling deployment"
+          },
+          {
+            "D": "Recreate deployment"
+          }
+        ],
         "answer": "B",
         "page": 2,
         "most_voted": "B"
@@ -4094,31 +4162,57 @@
       {
         "source": "",
         "topic": "",
-        "question": "Your company wants to expand their users outside the United States for their popular application. The company wants to ensure 99.999% availability of the database for their application and also wants to minimize the read latency for their users across the globe.\nWhich two actions should they take? (Choose two.)",
+        "question": "Your company wants to expand their users outside the United States for their popular application. The company wants to ensure 99.999% availability of the database for their application and also wants to minimize the read latency for their users across the globe.\\nWhich two actions should they take? (Choose two.)",
         "type": "multiple_choice",
-        "choices": {
-          "A": "Create a multi-regional Cloud Spanner instance with \"nam-asia-eur1\" configuration.",
-          "B": "Create a multi-regional Cloud Spanner instance with \"nam3\" configuration.",
-          "C": "Create a cluster with at least 3 Spanner nodes.",
-          "D": "Create a cluster with at least 1 Spanner node.",
-          "E": "Create a minimum of two Cloud Spanner instances in separate regions with at least one node.",
-          "F": "Create a Cloud Dataflow pipeline to replicate data across different databases."
-        },
-        "answer": ["A", "C"],
+        "choices": [
+          {
+            "A": "Create a multi-regional Cloud Spanner instance with \"nam-asia-eur1\" configuration."
+          },
+          {
+            "B": "Create a multi-regional Cloud Spanner instance with \"nam3\" configuration."
+          },
+          {
+            "C": "Create a cluster with at least 3 Spanner nodes."
+          },
+          {
+            "D": "Create a cluster with at least 1 Spanner node."
+          },
+          {
+            "E": "Create a minimum of two Cloud Spanner instances in separate regions with at least one node."
+          },
+          {
+            "F": "Create a Cloud Dataflow pipeline to replicate data across different databases."
+          }
+        ],
+        "answer": [
+          "A",
+          "C"
+        ],
         "page": 2,
-        "most_voted": ["A", "C"]
+        "most_voted": [
+          "A",
+          "C"
+        ]
       },
       {
         "source": "",
         "topic": "",
-        "question": "You want to upload files from an on-premises virtual machine to Google Cloud Storage as part of a data migration. These files will be consumed by Cloud DataProc Hadoop cluster in a GCP environment.\nWhich command should you use?",
+        "question": "You want to upload files from an on-premises virtual machine to Google Cloud Storage as part of a data migration. These files will be consumed by Cloud DataProc Hadoop cluster in a GCP environment.\\nWhich command should you use?",
         "type": "option",
-        "choices": {
-          "A": "gsutil cp [LOCAL_OBJECT] gs://[DESTINATION_BUCKET_NAME]/",
-          "B": "gcloud cp [LOCAL_OBJECT] gs://[DESTINATION_BUCKET_NAME]/",
-          "C": "hadoop fs cp [LOCAL_OBJECT] gs://[DESTINATION_BUCKET_NAME]/",
-          "D": "gcloud dataproc cp [LOCAL_OBJECT] gs://[DESTINATION_BUCKET_NAME]/"
-        },
+        "choices": [
+          {
+            "A": "gsutil cp [LOCAL_OBJECT] gs://[DESTINATION_BUCKET_NAME]/"
+          },
+          {
+            "B": "gcloud cp [LOCAL_OBJECT] gs://[DESTINATION_BUCKET_NAME]/"
+          },
+          {
+            "C": "hadoop fs cp [LOCAL_OBJECT] gs://[DESTINATION_BUCKET_NAME]/"
+          },
+          {
+            "D": "gcloud dataproc cp [LOCAL_OBJECT] gs://[DESTINATION_BUCKET_NAME]/"
+          }
+        ],
         "answer": "A",
         "page": 1,
         "most_voted": "A"
@@ -4126,14 +4220,22 @@
       {
         "source": "",
         "topic": "",
-        "question": "You migrated your applications to Google Cloud Platform and kept your existing monitoring platform. You now find that your notification system is too slow for time critical problems.\nWhat should you do?",
+        "question": "You migrated your applications to Google Cloud Platform and kept your existing monitoring platform. You now find that your notification system is too slow for time critical problems.\\nWhat should you do?",
         "type": "option",
-        "choices": {
-          "A": "Replace your entire monitoring platform with Stackdriver.",
-          "B": "Install the Stackdriver agents on your Compute Engine instances.",
-          "C": "Use Stackdriver to capture and alert on logs, then ship them to your existing platform.",
-          "D": "Migrate some traffic back to your old platform and perform AB testing on the two platforms concurrently."
-        },
+        "choices": [
+          {
+            "A": "Replace your entire monitoring platform with Stackdriver."
+          },
+          {
+            "B": "Install the Stackdriver agents on your Compute Engine instances."
+          },
+          {
+            "C": "Use Stackdriver to capture and alert on logs, then ship them to your existing platform."
+          },
+          {
+            "D": "Migrate some traffic back to your old platform and perform AB testing on the two platforms concurrently."
+          }
+        ],
         "answer": "C",
         "page": 1,
         "most_voted": "A"
@@ -4141,14 +4243,22 @@
       {
         "source": "",
         "topic": "",
-        "question": "You have deployed an HTTP(s) Load Balancer with the gcloud commands shown below.<codeblock>\nexport NAME=load-balancer\n\n# Create network\ngcloud compute networks create ${NAME}\n\n# Add instance\ngcloud compute instances create ${NAME}-backend-instance-1\n\n# Create the instance group\ngcloud compute instance-groups unmanaged create ${NAME}-i --subnet ${NAME} --no-address\n\ngcloud compute instance-groups unmanaged set-named-ports ${NAME}-i --named-ports http:80\n\ngcloud compute instance-groups unmanaged add-instances ${NAME}-i --instances ${NAME}-backend-instance-1\n\n# Configure health checks\ngcloud compute health-checks create http ${NAME}-http-hc --port 80\n\n# Create backend service\ngcloud compute backend-services create ${NAME}-http-bes --health-checks ${NAME}-http-hc --protocol HTTP --port-name http --global\n\ngcloud compute backend-services add-backend ${NAME}-http-bes --instance-group ${NAME}-i --balancing-mode RATE --max-rate 100000 --capacity-scaler 1.0 --global --instance-group-zone us-east1-d\n\n# Create URLs maps and forwarding rule\ngcloud compute url-maps create ${NAME}-http-urlmap --default-service ${NAME}-http-bes\n\ngcloud compute target-http-proxies create ${NAME}-http-proxy --url-map ${NAME}-http-urlmap\n\ngcloud compute forwarding-rules create ${NAME}-http-fw --global --target-http-proxy ${NAME}-http-proxy --ports 80\n\n </codeblock>Health checks to port 80 on the Compute Engine virtual machine instance are failing and no traffic is sent to your instances. You want to resolve the problem.\nWhich commands should you run?",
+        "question": "You have deployed an HTTP(s) Load Balancer with the gcloud commands shown below.\\n\\nexport NAME=load-balancer\\n\\n# Create network\\ngcloud compute networks create ${NAME}\\n\\n# Add instance\\ngcloud compute instances create ${NAME}-backend-instance-1\\n\\n# Create the instance group\\ngcloud compute instance-groups unmanaged create ${NAME}-i --subnet ${NAME} --no-address\\n\\ngcloud compute instance-groups unmanaged set-named-ports ${NAME}-i --named-ports http:80\\n\\ngcloud compute instance-groups unmanaged add-instances ${NAME}-i --instances ${NAME}-backend-instance-1\\n\\n# Configure health checks\\ngcloud compute health-checks create http ${NAME}-http-hc --port 80\\n\\n# Create backend service\\ngcloud compute backend-services create ${NAME}-http-bes --health-checks ${NAME}-http-hc --protocol HTTP --port-name http --global\\n\\ngcloud compute backend-services add-backend ${NAME}-http-bes --instance-group ${NAME}-i --balancing-mode RATE --max-rate 100000 --capacity-scaler 1.0 --global --instance-group-zone us-east1-d\\n\\n# Create URLs maps and forwarding rule\\ngcloud compute url-maps create ${NAME}-http-urlmap --default-service ${NAME}-http-bes\\n\\ngcloud compute target-http-proxies create ${NAME}-http-proxy --url-map ${NAME}-http-urlmap\\n\\ngcloud compute forwarding-rules create ${NAME}-http-fw --global --target-http-proxy ${NAME}-http-proxy --ports 80\\n\\nHealth checks to port 80 on the Compute Engine virtual machine instance are failing and no traffic is sent to your instances. You want to resolve the problem.\\nWhich commands should you run?",
         "type": "option",
-        "choices": {
-          "A": "gcloud compute instances add-access-config ${NAME}-backend-instance-1",
-          "B": "gcloud compute instances add-tags ${NAME}-backend-instance-1 --tags http-server",
-          "C": "gcloud compute firewall-rules create allow-lb --network load-balancer --allow tcp:80 --source-ranges 130.211.0.0/22,35.191.0.0/16 --direction INGRESS",
-          "D": "gcloud compute firewall-rules create allow-lb --network load-balancer --allow tcp:80 --destination-ranges 130.211.0.0/22,35.191.0.0/16 --direction EGRESS"
-        },
+        "choices": [
+          {
+            "A": "gcloud compute instances add-access-config ${NAME}-backend-instance-1"
+          },
+          {
+            "B": "gcloud compute instances add-tags ${NAME}-backend-instance-1 --tags http-server"
+          },
+          {
+            "C": "gcloud compute firewall-rules create allow-lb --network load-balancer --allow tcp:80 --source-ranges 130.211.0.0/22,35.191.0.0/16 --direction INGRESS"
+          },
+          {
+            "D": "gcloud compute firewall-rules create allow-lb --network load-balancer --allow tcp:80 --destination-ranges 130.211.0.0/22,35.191.0.0/16 --direction EGRESS"
+          }
+        ],
         "answer": "C",
         "page": 1,
         "most_voted": "C"
@@ -4156,14 +4266,22 @@
       {
         "source": "",
         "topic": "",
-        "question": "Your website is deployed on Compute Engine. Your marketing team wants to test conversion rates between 3 different website designs.\nWhich approach should you use?",
+        "question": "Your website is deployed on Compute Engine. Your marketing team wants to test conversion rates between 3 different website designs.\\nWhich approach should you use?",
         "type": "option",
-        "choices": {
-          "A": "Deploy the website on App Engine and use traffic splitting.",
-          "B": "Deploy the website on App Engine as three separate services.",
-          "C": "Deploy the website on Cloud Functions and use traffic splitting.",
-          "D": "Deploy the website on Cloud Functions as three separate functions."
-        },
+        "choices": [
+          {
+            "A": "Deploy the website on App Engine and use traffic splitting."
+          },
+          {
+            "B": "Deploy the website on App Engine as three separate services."
+          },
+          {
+            "C": "Deploy the website on Cloud Functions and use traffic splitting."
+          },
+          {
+            "D": "Deploy the website on Cloud Functions as three separate functions."
+          }
+        ],
         "answer": "A",
         "page": 1,
         "most_voted": "A"
@@ -4171,14 +4289,22 @@
       {
         "source": "",
         "topic": "",
-        "question": "You are designing a schema for a table that will be moved from MySQL to Cloud Bigtable. The MySQL table is as follows:<codeblock>\nCREATE TABLE AccountActivity (\n    Account_id int,\n    Event_timestamp datetime,\n    Transaction_type varchar(255),\n    Amount numeric(18, 4),\n    PRIMARY KEY (Account_id, Event_timestamp)\n);</codeblock>\nHow should you design a row key for Cloud Bigtable for this table?",
+        "question": "You are designing a schema for a table that will be moved from MySQL to Cloud Bigtable. The MySQL table is as follows:\n\nCREATE TABLE AccountActivity (\n    Account_id int,\n    Event_timestamp datetime,\n    Transaction_type varchar(255),\n    Amount numeric(18, 4),\n    PRIMARY KEY (Account_id, Event_timestamp)\n);\n\nHow should you design a row key for Cloud Bigtable for this table?",
         "type": "option",
-        "choices": {
-          "A": "Set Account_id as a key.",
-          "B": "Set Account_id_Event_timestamp as a key.",
-          "C": "Set Event_timestamp_Account_id as a key.",
-          "D": "Set Event_timestamp as a key."
-        },
+        "choices": [
+          {
+            "A": "Set Account_id as a key."
+          },
+          {
+            "B": "Set Account_id_Event_timestamp as a key."
+          },
+          {
+            "C": "Set Event_timestamp_Account_id as a key."
+          },
+          {
+            "D": "Set Event_timestamp as a key."
+          }
+        ],
         "answer": "B",
         "page": 11,
         "most_voted": "B"
@@ -4188,16 +4314,23 @@
         "topic": "",
         "question": "You have an analytics application that runs hundreds of queries on BigQuery every few minutes using BigQuery API. You want to find out how much time these queries take to execute.\nWhat should you do?",
         "type": "option",
-        "choices": {
-          "A": "Use Stackdriver Monitoring to plot slot usage.",
-          "B": "Use Stackdriver Trace to plot API execution time.",
-          "C": "Use Stackdriver Trace to plot query execution time.",
-          "D": "Use Stackdriver Monitoring to plot query execution times."
-        },
+        "choices": [
+          {
+            "A": "Use Stackdriver Monitoring to plot slot usage."
+          },
+          {
+            "B": "Use Stackdriver Trace to plot API execution time."
+          },
+          {
+            "C": "Use Stackdriver Trace to plot query execution time."
+          },
+          {
+            "D": "Use Stackdriver Monitoring to plot query execution times."
+          }
+        ],
         "answer": "C",
         "page": 11,
         "most_voted": "D"
       }
-      
   ]
 }

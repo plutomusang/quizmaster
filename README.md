@@ -129,6 +129,7 @@ This guide outlines the steps to build your React application and deploy it to G
 7. **Upload a Specific File:** Upload `exam.json` from the `src` directory to the bucket:
     ```bash
     gsutil cp ../src/exam.json gs://exam-bucket-test1/exam.json
+    gsutil cp ./src/exam.json gs://exam-bucket-test1/exam.json
     ```
 
 This guide assists in deploying your React application and uploading specific files to Google Cloud Storage, ensuring your project is up-to-date and accessible.
