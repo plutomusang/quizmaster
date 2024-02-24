@@ -130,6 +130,7 @@ This guide outlines the steps to build your React application and deploy it to G
     ```bash
     gsutil cp ./src/examJson/GoogleCloudDeveloper_Exam_Dump.json gs://exam-bucket-test1/exam.json
     gsutil cp ./src/examJson/GoogleCloudDigitalLeader.json gs://exam-bucket-test1/GoogleCloudDigitalLeader.json
+    gsutil cp ./src/examJson/GoogleCloudDeveloper_Cloud_Guro.json gs://exam-bucket-test1/GoogleCloudDeveloper_Cloud_Guro.json
     ```
 
 This guide assists in deploying your React application and uploading specific files to Google Cloud Storage, ensuring your project is up-to-date and accessible.
