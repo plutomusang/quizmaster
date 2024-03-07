@@ -1,0 +1,118 @@
+{
+    "exam_questions": [
+            {
+            "source": "",
+            "topic": "React useState and Event Handling",
+            "question": "What is the output of the below code\n<codeblock>import { useState } from 'react';\n\nexport default function Counter() {\n  const [counter, setCounter] = useState(5);\n\n  return (\n    <>\n      <span>{counter}</span>\n      <button onClick={() => {\n        setCounter(counter => counter + 5);\n        setCounter(counter => counter + 5);\n        alert(counter);\n        setCounter(counter => counter + 5);\n        setCounter(counter => counter + 5);\n      }}>Increment</button>\n    </>\n  );\n}</codeblock>",
+            "type": "option",
+            "choices": {
+              "A": "Alert with 5, 25",
+              "B": "Alert with 5, 10",
+              "C": "Alert with 15, 25",
+              "D": "Alert with 15, 10"
+            },
+            "keyPoints": [
+              {
+                "title": "useState Asynchronicity",
+                "keywords": ["useState", "alert(counter);", "setCounter(counter => counter + 5)"],
+                "explanation": "The useState hook schedules updates to the state variable 'counter' asynchronously. When 'setCounter' is invoked, it queues an update to 'counter', but 'alert(counter)' displays the value of 'counter' before these updates are applied. Despite the button being clicked and 'setCounter' being called multiple times, the alert will show the initial state of 'counter' as '5', because state updates haven't been processed yet."
+              },
+              {
+                "title": "Batched State Updates",
+                "keywords": ["setCounter(counter => counter + 5)"],
+                "explanation": "React's setState (and by extension, setCounter from useState) batches updates for performance reasons. This means that even if 'setCounter' is called multiple times in the same event loop, the state 'counter' is updated once at the end of the event loop. Thus, 'alert' showing '5' indicates that it is executed before the state updates take effect."
+              },
+              {
+                "title": "Understanding Event Handling",
+                "keywords": ["onClick"],
+                "explanation": "The onClick event handler triggers 'handleClick function', which intends to increment 'counter' by 5 on each click. However, due to JavaScript's synchronous execution of code and React's asynchronous state update mechanism, the displayed alert during the execution shows '5', the value of 'counter' before the state updates."
+              }
+            ],
+            "answer": "B",
+            "page": 0,
+            "most_voted": "D"
+          },
+          {
+            "source": "",
+            "topic": "",
+            "question": "What is the output of the below code\n<codeblock>import { useState } from 'react';\n\nexport default function Counter() {\n  const [counter, setCounter] = useState(5);\n\n  return (\n    <>\n      <span>{counter}</span>\n      <button onClick={() => {\n        setCounter(counter + 5);\n        setCounter(counter + 5);\n        alert(counter);\n        setCounter(counter + 5);\n        setCounter(counter + 5);\n      }}>Increment</button>\n    </>\n  )\n}</codeblock>",
+            "type": "option",
+            "choices": {
+              "A": "Alert with 5, 5",
+              "B": "Alert with 15, 25",
+              "C": "Alert with 5, 10",
+              "D": "Error: Cannot update the same state multiple times concurrently"
+            },
+            "answer": "A",
+            "page": 0,
+            "most_voted": "A"
+          },
+          {
+            "source": "",
+            "topic": "",
+            "question": "What is the output of span after one click?\n<codeblock>import { useRef } from 'react';\n\nexport default function Counter() {\n  let countRef = useRef(0);\n\n  function handleIncrement() {\n    countRef.current = countRef.current + 1;\n  }\n\n  return \n  <>\n    <span>Count: {countRef.current}</span>\n    <button onClick={handleIncrement}>\n      Click me\n    </button>\n  </>\n}</codeblock>",
+            "type": "option",
+            "choices": {
+              "A": "Cannot read current property of undefined",
+              "B": "Count: 1",
+              "C": "null",
+              "D": "Count: 0"
+            },
+            "answer": "D",
+            "page": 0,
+            "most_voted": "D"
+          },
+          {
+            "source": "",
+            "topic": "",
+            "question": "What is the outcome of below code after button click?\n<codeblock>import { useRef } from 'react';\n\nfunction MyCustomInput(props) {\n  return <input {...props} />;\n}\n\nexport default function MyCustomForm() {\n  const inputRef = useRef(null);\n\n  function handleInputFocus() {\n    inputRef.current.focus();\n  }\n\n  return (\n    <>\n      <MyCustomInput ref={inputRef} />\n      <button onClick={handleInputFocus}>\n        Click Me\n      </button>\n    </>\n  );\n}</codeblock>",
+            "type": "option",
+            "choices": {
+              "A": "Input gets the focus",
+              "B": "Warning: Function components cannot be given refs.",
+              "C": "Cannot read current property of undefined",
+              "D": "Warning: Missing ref on element"
+            },
+            "answer": "B",
+            "page": 0,
+            "most_voted": "B"
+          },
+          {
+            "source": "",
+            "topic": "",
+            "question": "What is the outcome of the number of clicks after 3 button clicks?\n<codeblock><color:green>import</color> { <color:blue>useRef</color> } <color:green>from</color> 'react';\n\n<color:green>export default function</color> <color:blue>Counter</color>() {\n  let <color:blue>ref</color> = <color:blue>useRef</color>(0);\n\n  function <color:blue>handleClick</color>() {\n    <color:blue>ref</color>.current = <color:blue>ref</color>.current + 1;\n  }\n\n  return (\n    <>\n\t\t<div>Clicked + {<color:blue>ref</color>.current} + times</div>\n\t\t<button onClick={<color:blue>handleClick</color>}>\n\t\t\tClick me!\n\t\t</button>\n    </>\n  );\n}</codeblock>",
+            "type": "option",
+            "choices": {
+              "A": "3 times",
+              "B": "4 times",
+              "C": "2 times",
+              "D": "0 times"
+            },
+            "answer": "D",
+            "page": 0,
+            "most_voted": "D"
+          },
+          {
+            "source": "",
+            "topic": "",
+            "question": "",
+            "type": "",
+            "choices": {
+              "A": "",
+              "B": "",
+              "C": "",
+              "D": ""
+            },
+            "keyPoints":[
+                {
+                    "title": "",
+                    "keywords" : [],
+                    "explanation" : ""
+                }
+            ],
+            "answer": "",
+            "page": 0,
+            "most_voted": ""
+          }
+    ]
+}

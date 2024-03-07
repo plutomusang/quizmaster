@@ -181,7 +181,7 @@
         "most_voted": ["A", "D"]
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/df217c07-f71f-4f71-b749-2467fc49fa86",
         "topic": "",
         "question": "You have been asked to create a canary deployment for your application in GKE. You normally run a standard deployment with 10 replica Pods. How should you modify your configuration to do this?",
         "type": "option",
@@ -196,7 +196,7 @@
         "most_voted": "C"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/0d9e9946-723b-4f9a-8e90-5b9c1f293920",
         "topic": "",
         "question": "As your development team moves towards cloud-native app design, what methods would you recommend getting software deployed to a Compute Engine VM? (Choose 3)",
         "type": "multiple_choice",
@@ -211,7 +211,7 @@
         "most_voted": ["A", "B", "D"]
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/cf335f01-74a6-4247-b2ef-5b9a1d49e8e2",
         "topic": "",
         "question": "You are trying to scale up a deployment in Kubernetes Engine, but your Pods are not being scheduled. You can see an error regarding 'insufficient CPU'. What could be causing this problem? (Choose 2)",
         "type": "multiple_choice",
@@ -226,7 +226,7 @@
         "most_voted": ["A", "D"]
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/f6ed7f29-b038-48e3-b169-4628d91e82b2",
         "topic": "",
         "question": "You have created a Cloud Function that should only be invoked by calls from a backend application. The backend application runs in Compute Engine with the service account backend@myproject.iam.gserviceaccount.com. How should you configure IAM for the function?",
         "type": "option",
@@ -241,7 +241,7 @@
         "most_voted": "B"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/72116ea1-1107-4e17-81c0-05c6eb4b0428",
         "topic": "",
         "question": "You wish to direct a small percentage of production traffic to a new version of your application, so that your changes can be tested on a subset of live users. What is the name of this deployment pattern?",
         "type": "option",
@@ -256,7 +256,7 @@
         "most_voted": "B"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/65b6fd05-6dea-4786-8139-105134adecfc",
         "topic": "",
         "question": "Your team are creating two Cloud Functions: The first function will take images from a Cloud Storage bucket and check them for 'work-safety' using the Cloud Vision API, and the second function will create thumbnails of approved images and store them in a separate bucket. The original images are uploaded as part of an App Engine frontend web app. What is the best way to set up the triggers for this workflow?",
         "type": "option",
@@ -268,10 +268,10 @@
         },
         "answer": "A",
         "page": 18,
-        "most_voted": "A"
+        "most_voted": "B"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/e1575aac-1a6d-4f11-a44e-9a2366ca5ea4",
         "topic": "",
         "question": "Your CSO is concerned that developers in your organization's application teams may be using insecure container images that may expose vulnerabilities when deployed. What GCP service can you leverage to help stop this happening?",
         "type": "option",
@@ -283,10 +283,10 @@
         },
         "answer": "A",
         "page": 19,
-        "most_voted": "A"
+        "most_voted": "B"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/ce578717-1ad3-460a-8da3-214c06de4ace",
         "topic": "",
         "question": "As part of your business continuity plan, you are required to keep backups for at least 90 days that will only be accessed in a disaster recovery (DR) scenario. Which is the most cost-effective storage class that meets these requirements?",
         "type": "option",
@@ -301,7 +301,7 @@
         "most_voted": "C"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/52455495-3e9b-45d4-8b0b-d59f83ca420e",
         "topic": "",
         "question": "You are containerizing an application to run in Google Kubernetes Engine. The application is old and expects to connect to a MySQL database running on the same 'server'. However, your team has decided to use Cloud SQL for MySQL. How can you deploy the application to use Cloud SQL?",
         "type": "option",
@@ -316,7 +316,7 @@
         "most_voted": "C"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/53585af8-f1f6-49ea-b550-3081da298f7e",
         "topic": "",
         "question": "You are running an application in Compute Engine that produces its own custom logs that are written to /var/log/myapp/myapp.log. You would like to import these logs into Cloud Logging so that you can view them in the Operations dashboard. What is the easiest way to do this?",
         "type": "option",
@@ -331,7 +331,7 @@
         "most_voted": "B"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/5c911582-77d4-455d-aeaf-4ba2dc382b46",
         "topic": "",
         "question": "You are running a website for a famous photographer in Compute Engine using autoscaling Managed Instance Groups (MIGs) and the Cloud Load Balancer. When your customer takes a photo that goes viral, load to the site increases dramatically and more instances are spun up, as per design. However, this costs more as you are running more instances. What change could you make to reduce costs?",
         "type": "option",
@@ -346,7 +346,7 @@
         "most_voted": "C"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/7188e5a4-cb07-40af-a7c5-3d684e0a21e8",
         "topic": "",
         "question": "You are running a backend service in Kubernetes Engine that is required to communicate with the Cloud Vision API. In order for this to work, you must authenticate with the API. What options do you have for setting this up securely? (Choose 2)",
         "type": "multiple_choice",
@@ -361,7 +361,7 @@
         "most_voted": ["A", "C"]
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/f4c4d64c-3fce-4d21-ac6f-b70ea8a7934f",
         "topic": "",
         "question": "You are creating a new web application for a global audience. You need to choose a database service specifically for storing user sessions. Your users may connect from any location in the world, and transactions should be strongly consistent. As this is a new application, you would like to keep costs down where possible. Which database should you choose?",
         "type": "option",
@@ -376,7 +376,7 @@
         "most_voted": "A"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/b73cea94-b967-40ef-ad49-b16b8d286693",
         "topic": "",
         "question": "An application team in your organization runs to start deploying its containerized application to Cloud Run. You are performing a security audit of their build practices and ask them where their source container images come from. Which answers would be satisfactory? (Choose 2)",
         "type": "multiple_choice",
@@ -391,7 +391,7 @@
         "most_voted": ["C", "D"]
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/af44ce14-9036-45de-9e77-65b10e29dabf",
         "topic": "",
         "question": "An application team in your company is having problems deploying their application to GCP. Their code compiles successfully, but when it is deployed the overall application reports several errors. As a cloud developer, what sort of testing could help the team to diagnose their problem?",
         "type": "option",
@@ -406,7 +406,8 @@
         "most_voted": "A"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/6e9db88d-b168-43e3-a65e-08949728cc50",
+        "diagram": "https://diagrams.helpful.dev/d/d:zt0Q9jvZ",
         "topic": "",
         "question": "Your organization is being audited and you have found that you need to ensure that data for your European customers is being stored geographically in Europe. You have isolated all customers to a single Cloud SQL database, but currently all your databases run in central USA regions. What should you do?",
         "type": "option",
@@ -421,7 +422,7 @@
         "most_voted": "B"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/28f647b1-2fe1-474a-9b60-4fe26fd8718f",
         "topic": "",
         "question": "Your organization is building a new version of its software specifically for the cloud. There are several teams, each containing 2-3 developers who are responsible for a separate feature of the application. What would be the recommended approach to this application redesign?",
         "type": "option",
@@ -436,7 +437,7 @@
         "most_voted": "C"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/eef3a28b-ab50-405b-854b-27ce57fac6eb",
         "topic": "",
         "question": "You are advising a software team in your organization on the best way to deploy their application to the cloud. Their application is a stateless web service, which they have packaged as a container. They would like it to run on a fully managed service which includes autoscaling. Which platform would you recommend?",
         "type": "option",
@@ -451,7 +452,7 @@
         "most_voted": "B"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/3371b410-62c5-4ed6-92cb-5fafdee7658e",
         "topic": "",
         "question": "You are developing a web app in GCP, and you are at the testing phase. You have configured a Load Balancer service to expose your web app with a public IP address. What else do you need in order to configure an uptime check in Cloud Monitoring? (Choose 2)",
         "type": "multiple_choice",
@@ -466,7 +467,7 @@
         "most_voted": ["A", "B"]
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/d77f91db-1a13-4c94-826e-2ded1f85a651",
         "topic": "",
         "question": "You are advising a potential customer on how to migrate their application and database to GCP. They are running a stateless autoscaling web frontend with containers and a MySQL database for time-series data, which is currently at 50 TB in size. You have already advised them to use Cloud Run for their frontend. Which database option should they consider in GCP?",
         "type": "option",
@@ -481,7 +482,7 @@
         "most_voted": "B"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/c276f776-83d5-44f6-bcac-6d14c0c53ee1",
         "topic": "",
         "question": "Some Compute Engine VMs in your GCP project seem to be stopped, but you are not sure why. Where is the first place you should look to investigate what might have happened?",
         "type": "option",
@@ -496,7 +497,7 @@
         "most_voted": "C"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/f889b2e5-a981-4339-9740-6c18fedc2c42",
         "topic": "",
         "question": "You are designing the infrastructure for a new ecommerce application. It is important that logs from every part of the application are available for your data analytics team to query using standard SQL syntax. The solution you choose must scale as your application grows. What is the best way to set this up?",
         "type": "option",
@@ -508,10 +509,10 @@
         },
         "answer": "A",
         "page": 34,
-        "most_voted": "A"
+        "most_voted": "D"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/cc166477-4528-4764-9b85-1883d9061336",
         "topic": "",
         "question": "You are running an employee management App Engine application that performs several background actions when a new user is registered: It sends an email registration, it configures a user profile in the database, and it sets up a number of employee duties in the system. Each of these actions takes between 5-60 seconds to complete, and they currently block the application loading, occasionally causing a timeout. A user may then reload the page and accidentally resubmit a registration form, which causes duplication problems. What is the easiest way to refactor this application to remove this problem?",
         "type": "option",
@@ -586,7 +587,7 @@
         "most_voted": "A"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/1ef5682c-384c-449b-a512-c38ddb232ea0",
         "topic": "",
         "question": "Your organization has two separate product teams that develop their own services in isolation. Each team requires a way to develop their application and deploy it to separate development, staging, and production environments. What is the best way to set this up in the GCP hierarchy?",
         "type": "option",
@@ -596,9 +597,9 @@
           "C": "Use a separate GCP organization for each product team. Create a folder for each of the required environments: development, staging, and production.",
           "D": "Use a single GCP organization, and create folders for each of the product teams. Within each folder, create separate projects for development, staging, and production environments."
         },
-        "answer": "A",
+        "answer": "D",
         "page": 40,
-        "most_voted": "A"
+        "most_voted": "D"
       },
       {
         "source": "",
@@ -631,7 +632,7 @@
         "most_voted": ["A", "B"]
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/40f53082-d0ea-4a4f-976d-a42042d279d2",
         "topic": "",
         "question": "You want to run a workload in GKE that should have access to a private Cloud Run service. Permission to access the Cloud Run service has been granted to a custom service account. Ideally, you don't want to alter the container running in GKE. Which of the following is the best approach to take?",
         "type": "option",
@@ -646,7 +647,7 @@
         "most_voted": "B"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/3d983565-b732-43ee-97cc-25d1ed2d3bcf",
         "topic": "",
         "question": "You are going to deploy a backend application to Kubernetes Engine that will use GCE Persistent Disks to provide PersistentVolume objects for your workload. However, you are concerned about the storage of standard persistent disks and how it will affect your application. What is the easiest solution for this?",
         "type": "option",
@@ -661,7 +662,7 @@
         "most_voted": "D"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/e689298a-8767-4107-a01d-c0321b27e1f6",
         "topic": "",
         "question": "You are monitoring an application that handles queues of tasks for an internal system. You have configured a custom logs-based metric to alert you whenever a queue has over 100 uncompleted tasks. Sometimes, however, a queue can have no tasks for a length of time, which usually means some other part of the system has gone wrong. How can you also use Cloud Monitoring to alert you of this situation?",
         "type": "option",
@@ -676,7 +677,7 @@
         "most_voted": "C"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/afa3d246-86f3-478c-8afb-967d497dd7c1",
         "topic": "",
         "question": "You are running a deployment in Google Kubernetes Engine that has a known bug that occasionally causes a memory leak. When this happens, the affected Pods will consume all of the available memory of their host node, and the application will become non-responsive. Each container instance should only use between 256Mi and 512Mi of memory. The development team are working on fixing the bug, but in the meantime, what remediation can you put in place to stop this happening?",
         "type": "option",
@@ -686,12 +687,12 @@
           "C": "Update the deployment. Set resources: limits: memory: to 512Mi and resources: requests: memory: to 256Mi.",
           "D": "No changes can be made to moderate this behaviour until the bug is fixed."
         },
-        "answer": "B",
+        "answer": "C",
         "page": 46,
-        "most_voted": "B"
+        "most_voted": "C"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/1e3aeaa2-7414-40a4-a74e-a5e58174b2cb",
         "topic": "",
         "question": "You are running an app in App Engine that is failing occasionally. The app is quite complex, and you believe the failure may be caused by a required variable either not being set at the correct time or set to an incorrect object type. What are the easiest ways to use Operations Suite to debug the code and find the issue? (Choose 2)",
         "type": "multiple_choice",
@@ -721,7 +722,7 @@
         "most_voted": "D"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/248ee341-b3ff-494b-bf8b-a2284175c0e2",
         "topic": "",
         "question": "You are managing an application that is deployed to a Managed Instance Group (MIG) of Compute Engine VMs. When the group scales up, new instances in the group run a startup script that updates their packages and installs the required software before they are ready to serve. This means that autoscaling events normally take 10-20 minutes before the group can respond to the new demand in traffic. How could you speed this up?",
         "type": "option",
@@ -736,7 +737,7 @@
         "most_voted": "A"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/66d65cbc-581f-49e3-91f7-a909ced3d3c5",
         "topic": "",
         "question": "You have updated an existing deployment in Google Kubernetes Engine with a new version of your application, but Pods in the new ReplicaSet are failing to start, reporting an error of ImagePullErr. What could be the cause of this error?",
         "type": "option",

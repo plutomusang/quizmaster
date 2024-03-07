@@ -110,6 +110,7 @@
       },
       {
           "question": "Your application is built as a custom machine image. You have multiple unique deployments of the machine image. Each deployment is a separate managed instance group with its own template. Each deployment requires a unique set of configuration values. You want to provide these unique values to each deployment but use the same custom machine image in all deployments. You want to use out-of-the-box features of Compute Engine.\nWhat should you do?",
+          "source": "https://chat.openai.com/share/65637be9-dc20-4c7c-8bb0-ff7635a78f74",
           "type": "option",
           "topic": "https://chat.openai.com/share/3b7c977c-c3eb-45a7-983d-9939c8412d35",
           "choices": {
@@ -125,6 +126,7 @@
       {
           "question": "Your application performs well when tested locally, but it runs significantly slower after you deploy it to a Compute Engine instance. You need to diagnose the problem. What should you do?",
           "type": "option",
+          "source": "https://chat.openai.com/share/80b5fa0f-83b4-44fa-98ae-de91d21713fc",
           "topic": "https://chat.openai.com/share/3b7c977c-c3eb-45a7-983d-9939c8412d35",
           "choices": {
               "A": "File a ticket with Cloud Support indicating that the application performs faster locally.",
@@ -139,6 +141,7 @@
       {
           "question": "You have an application running in App Engine. Your application is instrumented with Stackdriver Trace. The /product-details request reports details about four known unique products at /sku-details as shown below. You want to reduce the time it takes for the request to complete.\n[timeline : 0 /product-details (133.059 ms) timeline: 10 /sku-details (30.059 ms) timeline: 56 /sku-details (29.329 ms) timeline: 80 /sku-details (30.287 ms)]\nWhat should you do?",
           "type": "option",
+          "source": "https://chat.openai.com/share/d90eca9b-d157-4e6a-9555-2ffa65a17ffe",
           "topic": "https://chat.openai.com/share/3b7c977c-c3eb-45a7-983d-9939c8412d35",
           "choices": {
               "A": "Increase the size of the instance class.",
@@ -185,6 +188,7 @@
       {
           "question": "Your analytics system executes queries against a BigQuery dataset. The SQL query is executed in batch and passes the contents of a SQL file to the BigQuery CLI. Then it redirects the BigQuery CLI output to another process. However, you are getting a permission error from the BigQuery CLI when the queries are executed.\nYou want to resolve the issue. What should you do?",
           "type": "option",
+          "source": "https://chat.openai.com/g/g-wy9QVYjt7-question-analyzer/c/64007934-4082-488b-a492-8378f44ce3be",
           "topic": "https://chat.openai.com/share/3b7c977c-c3eb-45a7-983d-9939c8412d35",
           "choices": {
               "A": "Grant the service account BigQuery Data Viewer and BigQuery Job User roles.",
@@ -197,6 +201,7 @@
           "most_voted": ""
       },
       {
+          "source": "https://chat.openai.com/share/a229f526-73cc-4df8-8290-b50f5823141c",
           "topic": "https://chat.openai.com/share/3b7c977c-c3eb-45a7-983d-9939c8412d35",
           "question": "You are designing a schema for a Cloud Spanner customer database. You want to store a phone number array field in a customer table. You also want to allow users to search customers by phone number. How should you design this schema?",
           "type": "option",
@@ -212,6 +217,7 @@
       },
       {
           "topic": "https://chat.openai.com/share/3b7c977c-c3eb-45a7-983d-9939c8412d35",
+          "source": "https://chat.openai.com/share/6a80d01c-bd4d-4156-88dd-df90997eb01f",
           "question": "You are deploying a single website on App Engine that needs to be accessible via the URL http://www.altostrat.com/. What should you do?",
           "type": "option",
           "choices": {
@@ -226,6 +232,7 @@
       },
       {
           "topic": "https://chat.openai.com/share/3b7c977c-c3eb-45a7-983d-9939c8412d35",
+          "source": "",
           "question": "You are running an application on App Engine that you inherited. You want to find out whether the application is using insecure binaries or is vulnerable to XSS attacks. Which service should you use?",
           "type": "option",
           "choices": {
@@ -240,6 +247,7 @@
       },
       {
           "topic": "https://chat.openai.com/share/3b7c977c-c3eb-45a7-983d-9939c8412d35",
+          "source": "",
           "question": "You are working on a social media application. You plan to add a feature that allows users to upload images. These images will be 2 MB - 1 GB in size. You want to minimize their infrastructure operations overhead for this feature. What should you do?",
           "type": "option",
           "choices": {
@@ -255,6 +263,7 @@
       {
           "question": "Your application is running on Compute Engine and is showing sustained failures for a small number of requests. You have narrowed the cause down to a single Compute Engine instance, but the instance is unresponsive to SSH.\nWhat should you do next?",
           "type": "option",
+          "source": "https://chat.openai.com/share/26d4ac36-f80b-4a04-bdd5-8cbde4610c2a",
           "topic": "https://chat.openai.com/share/3b7c977c-c3eb-45a7-983d-9939c8412d35",
           "choices": {
               "A": "Reboot the machine.",
@@ -269,6 +278,7 @@
       {
           "question": "You configured your Compute Engine instance group to scale automatically according to overall CPU usage. However, your application's response latency increases sharply before the cluster has finished adding up instances. You want to provide a more consistent latency experience for your end users by changing the configuration of the instance group autoscaler. Which two configuration changes should you make? (Choose two.)",
           "type": "multiple_choice",
+          "source": "https://chat.openai.com/share/03d73d2c-7d50-4c4a-b5bf-15047a460ebd",
           "topic": "https://chat.openai.com/share/3b7c977c-c3eb-45a7-983d-9939c8412d35",
           "choices": {
               "A": "Add the label 'AUTOSCALE' to the instance group template.",
@@ -287,6 +297,7 @@
       {
           "question": "You have an application controlled by a managed instance group. When you deploy a new version of the application, costs should be minimized, and the number of instances should not increase. You want to ensure that, when each new instance is created, the deployment only continues if the new instance is healthy.\nWhat should you do?",
           "type": "option",
+          "source":"https://chat.openai.com/share/03d73d2c-7d50-4c4a-b5bf-15047a460ebd",
           "topic": "https://chat.openai.com/share/3b7c977c-c3eb-45a7-983d-9939c8412d35",
           "choices": {
               "A": "Perform a rolling-action with maxSurge set to 1, maxUnavailable set to 0.",
@@ -301,6 +312,7 @@
       {
           "question": "Your application is deployed in a Google Kubernetes Engine (GKE) cluster. You want to expose this application publicly behind a Cloud Load Balancing HTTP(S) load balancer. What should you do?",
           "type": "option",
+          "source": "https://chat.openai.com/share/459bb130-402a-4652-9e98-aa3af7c0daf6",
           "topic": "https://chat.openai.com/share/3b7c977c-c3eb-45a7-983d-9939c8412d35",
           "choices": {
               "A": "Configure a GKE Ingress resource.",
@@ -314,6 +326,9 @@
       },
       {
           "source": "https://chat.openai.com/c/7f458eb8-580f-47b0-a348-dea8ad1ecb3a",
+          "topics":[
+            "https://chat.openai.com/share/86313742-f05a-4a6b-aaf7-32042d51b253"
+          ],
           "topic": "https://chat.openai.com/c/7f458eb8-580f-47b0-a348-dea8ad1ecb3a",
           "question": "You are using Cloud Build build to promote a Docker image to Development, Test, and Production environments. You need to ensure that the same Docker image is deployed to each of these environments. How should you identify the Docker image in your build?",
           "type": "option",
@@ -330,6 +345,7 @@
       {
           "question": "Your company is planning to migrate their on-premises Hadoop environment to the cloud. Increasing storage cost and maintenance of data stored in HDFS is a major concern for your company. You also want to make minimal changes to existing data analytics jobs and existing architecture. How should you proceed with the migration?",
           "type": "option",
+          "source": "https://chat.openai.com/share/ec2d9147-0481-4b5f-bf67-11571edb02a2",
           "topic": "https://chat.openai.com/share/3b7c977c-c3eb-45a7-983d-9939c8412d35",
           "choices": {
               "A": "Migrate your data stored in Hadoop to BigQuery. Change your jobs to source their information from BigQuery instead of the on-premises Hadoop environment.",
@@ -358,6 +374,7 @@
       {
           "question": "Your company has created an application that uploads a report to a Cloud Storage bucket. When the report is uploaded to the bucket, you want to publish a message to a Cloud Pub/Sub topic. You want to implement a solution that will take a small amount of effort to implement. What should you do?",
           "type": "option",
+          "source": "https://chat.openai.com/share/8fe777c5-1c56-4ff7-92ba-c90c6b84e4dd",
           "topic": "https://chat.openai.com/share/3b7c977c-c3eb-45a7-983d-9939c8412d35",
           "choices": {
               "A": "Configure the Cloud Storage bucket to trigger Cloud Pub/Sub notifications when objects are modified.",
@@ -372,6 +389,7 @@
       {
           "question": "Your teammate has asked you to review the code below, which is adding a credit to an account balance in Cloud Datastore. Which improvement should you suggest your teammate make?<codeblock>\npublic Entity creditAccount (long accountId, long creditAmount) {\nEntity account = datastore.get\n(keyFactory.newKey (accountId));\naccount = Entity.builder (account).set( \"balance\", account.getLong (\"balance\") + creditAmount).build()\ndatastore.put (account);\nreturn account;\n}</codeblock>",
           "type": "option",
+          "source": "https://chat.openai.com/share/40be6249-2d0b-40df-93d5-32c340c968e4",
           "topic": "https://chat.openai.com/share/3b7c977c-c3eb-45a7-983d-9939c8412d35",
           "choices": {
               "A": "Get the entity with an ancestor query.",
@@ -1348,7 +1366,7 @@
           "most_voted": "AC"
       },
       {
-          "question": "You are building a CI/CD pipeline that consists of a version control system, Cloud Build, and Container Registry. Each time a new tag is pushed to the repository, a Cloud Build job is triggered, which runs unit tests on the new code builds a new Docker container image, and pushes it into Container Registry. The last step of your pipeline should deploy the new container to your production Google Kubernetes Engine (GKE) cluster. You need to select a tool and deployment strategy that meets the following requirements:\n\u2022 Zero downtime is incurred\n\u2022 Testing is fully automated\n\u2022 Allows for testing before being rolled out to users\n\u2022 Can quickly rollback if needed\n\nWhat should you do?",
+          "question": "You are building a CI/CD pipeline that consists of a version control system, Cloud Build, and Container Registry. Each time a new tag is pushed to the repository, a Cloud Build job is triggered, which runs unit tests on the new code builds a new Docker container image, and pushes it into Container Registry. The last step of your pipeline should deploy the new container to your production Google Kubernetes Engine (GKE) cluster. You need to select a tool and deployment strategy that meets the following requirements:\n\n\u2022 Zero downtime is incurred\n\u2022 Testing is fully automated\n\u2022 Allows for testing before being rolled out to users\n\u2022 Can quickly rollback if needed\n\nWhat should you do?",
           "type": "option",
           "source": "https://chat.openai.com/share/0bffe91b-c9a9-4d00-b4a5-0bc84cc7722c",
           "topic": "https://chat.openai.com/share/4fd1a055-436f-4a52-9349-6b7f95861d26",
@@ -1474,7 +1492,7 @@
       {
           "question": "Your development team has been tasked with maintaining a .NET legacy application. The application incurs occasional changes and was recently updated. Your goal is to ensure that the application provides consistent results while moving through the CI/CD pipeline from environment to environment. You want to minimize the cost of deployment while making sure that external factors and dependencies between hosting environments are not problematic. Containers are not yet approved in your organization. What should you do?",
           "type": "option",
-          "source": "https://chat.openai.com/share/2f650360-8445-4ba8-8307-4c5d5e39aa7a",
+          "source": "https://chat.openai.com/share/fae5e034-842b-429a-9049-304f2817a556",
           "topic": "https://chat.openai.com/share/4fd1a055-436f-4a52-9349-6b7f95861d26",
           "choices": {
               "A": "Rewrite the application using .NET Core, and deploy to Cloud Run. Use revisions to separate the environments.",
@@ -1639,7 +1657,7 @@
       {
           "question": "You made a typo in a low-level Linux configuration file that prevents your Compute Engine instance from booting to a normal run level. You just created the Compute Engine instance today and have done no other maintenance on it, other than tweaking files. How should you correct this error?",
           "type": "option",
-          "source": "https://chat.openai.com/share/17fa2784-d5f1-473f-92a0-56322572ebb5",
+          "source": "https://chat.openai.com/share/72d3d589-d0e2-45e6-8aa1-925cc4fde687",
           "topic": "https://chat.openai.com/share/e99c3ce8-756e-4541-81c5-fc41adec29c7",
           "choices": {
               "A": "Download the file using scp, change the file, and then upload the modified version",
@@ -1805,6 +1823,7 @@
       {
           "question": "You need to migrate a standalone Java application running in an on-premises Linux virtual machine (VM) to Google Cloud in a cost-effective manner. You decide not to take the lift-and-shift approach, and instead you plan to modernize the application by converting it to a container. How should you accomplish this task?",
           "type": "option",
+          "source": "https://chat.openai.com/share/15e6fc59-258e-4f7c-8b71-9196a9cc53b3",
           "choices": {
               "A": "Use Migrate for Anthos to migrate the VM to your Google Kubernetes Engine (GKE) cluster as a container.",
               "B": "Export the VM as a raw disk and import it as an image. Create a Compute Engine instance from the Imported image.",
@@ -1924,6 +1943,7 @@
           "question": "You are designing a chat room application that will host multiple rooms and retain the message history for each room. You have selected Firestore as your database. How should you represent the data in Firestore?",
           "type": "option",
           "source": "https://chat.openai.com/share/61f26c84-dd41-4c3d-be81-36bde66a7626",
+          "source2": "https://chat.openai.com/share/e1174045-4e0c-477d-8471-c90d09404e0c",
           "topic": "https://chat.openai.com/share/47c1a5be-53b8-4412-9e4a-fabfd789e038",
           "choices": {
               "A": "Create a collection for the rooms. For each room, create a document that lists the contents of the messages.",
@@ -2236,7 +2256,7 @@
       {
           "question": "Your company uses Cloud Logging to manage large volumes of log data. You need to build a real-time log analysis architecture that pushes logs to a third-party application for processing. What should you do?",
           "type": "option",
-          "source": "https://chat.openai.com/share/55f85394-44ac-4af3-a858-befbfbca5d62",
+          "source": "https://chat.openai.com/share/d4550262-82ef-4a8d-b6e7-0db1f886a022",
           "gpt": "https://chat.openai.com/c/7afba238-4117-4223-b4a1-295794898ece",
           "choices": {
               "A": "Create a Cloud Logging log export to Pub/Sub.",
@@ -3101,7 +3121,7 @@
       {
           "question": "You are defining your system tests for an application running in Cloud Run in a Google Cloud project. You need to create a testing environment that is isolated from the production environment. You want to fully automate the creation of the testing environment with the least amount of effort and execute automated tests. What should you do?",
           "type": "option",
-          "source": "https://chat.openai.com/share/ed8b11f6-578b-49f6-bdde-5f4df447c16f",
+          "source": "https://chat.openai.com/share/56821065-3f5d-4ddd-908c-f5d90a9c1162",
           "gpt": "https://chat.openai.com/c/4a92064a-d29b-4e1c-a34c-f46f10a695bc",
           "choices": {
               "A": "Using Cloud Build, execute Terraform scripts to create a new Google Cloud project and a Cloud Run instance of your application in the Google Cloud project.",
@@ -3354,7 +3374,7 @@
           "most_voted": "A"
       },
       {
-          "source": "",
+          "source": "https://chat.openai.com/share/db5e6adb-2683-4c0b-ba74-8e52a9655aab",
           "topic": "https://chat.openai.com/share/d1b20ac9-b2a5-4769-918c-3102b06bac47",
           "question": "Your team develops services that run on Google Cloud. You want to process messages sent to a Pub/Sub topic, and then store them. Each message must be processed exactly once to avoid duplication of data and any data conflicts. You need to use the cheapest and most simple solution. What should you do?",
           "type": "option",
@@ -3369,7 +3389,7 @@
           "most_voted": "B"
       },
       {
-          "source": "https://chat.openai.com/share/b74cc1fc-d5db-41d3-be95-895c925e1597",
+          "source": "https://chat.openai.com/share/4d521aba-877e-4fa3-ba35-ba24c9c527d5",
           "topic": "https://chat.openai.com/share/4fd1a055-436f-4a52-9349-6b7f95861d26",
           "question": "You have an on-premises application that authenticates to the Cloud Storage API using a user-managed service account with a user-managed key. The application connects to Cloud Storage using Private Google Access over a Dedicated Interconnect link. You discover that requests from the application to access objects in the Cloud Storage bucket are failing with a 403 Permission Denied error code. What is the likely cause of this issue?",
           "type": "option",
@@ -3469,7 +3489,7 @@
           "most_voted": ""
       },
       {
-          "source": "https://chat.openai.com/share/25cacf15-55c8-4477-bfac-671008ea00b7",
+          "source": "https://chat.openai.com/share/69105eef-9963-4077-82f0-b2cd46faf561",
           "topic": "https://chat.openai.com/share/3b7c977c-c3eb-45a7-983d-9939c8412d35",
           "gpt": "https://chat.openai.com/c/5796cb5f-83f1-40c4-ab2f-31154ae3f4b2",
           "Reference": [
@@ -3612,7 +3632,7 @@
         "most_voted": "B"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/ae609196-a24e-4d29-8563-b383aa5ddd87",
         "topic": "",
         "question": "Your existing application keeps user state information in a single MySQL database. This state information is very user-specific and depends heavily on how long a user has been using an application. The MySQL database is causing challenges to maintain and enhance the schema for various users.\nWhich storage option should you choose?",
         "type": "option",
@@ -3627,7 +3647,7 @@
         "most_voted": "D"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/8bc955d1-2a37-42d0-a166-71e43e65e0a2",
         "topic": "",
         "question": "You are building a new API. You want to minimize the cost of storing and reduce the latency of serving images.\nWhich architecture should you use?",
         "type": "option",
@@ -3642,7 +3662,7 @@
         "most_voted": "D"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/68009ed0-8fc3-43ee-a39d-242a4afe1b43",
         "topic": "",
         "question": "You are planning to deploy your application in a Google Kubernetes Engine (GKE) cluster. Your application can scale horizontally, and each instance of your application needs to have a stable network identity and its own persistent disk.\nWhich GKE object should you use?",
         "type": "option",
@@ -3672,7 +3692,7 @@
         "most_voted": "B"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/27ce75ed-f1fe-4856-ad84-38c648ef7c87",
         "topic": "",
         "question": "You are load testing your server application. During the first 30 seconds, you observe that a previously inactive Cloud Storage bucket is now servicing 2000 write requests per second and 7500 read requests per second. Your application is now receiving intermittent 5xx and 429 HTTP responses from the Cloud Storage JSON API as the demand escalates. You want to decrease the failed responses from the Cloud Storage API.\nWhat should you do?",
         "type": "option",
@@ -3688,6 +3708,7 @@
       },
       {
         "source": "https://chat.openai.com/share/c56d4100-1b63-4678-b486-0d5fc5e7675d",
+        "topics": ["https://chat.openai.com/share/ebdd9172-f2c0-4372-9b99-65d520bd5868"],
         "topic": "",
         "question": "Your application is controlled by a managed instance group. You want to share a large read-only data set between all the instances in the managed instance group. You want to ensure that each instance can start quickly and can access the data set via its filesystem with very low latency. You also want to minimize the total cost of the solution.\nWhat should you do?",
         "type": "option",
@@ -3703,6 +3724,7 @@
       },
       {
         "source": "https://chat.openai.com/share/77cdde41-fe16-49fe-bfd7-42581e49bed0",
+        "topics":["https://chat.openai.com/share/7f05cbc1-68fa-464f-83f2-0ee056030858"],
         "topic": "",
         "question": "You are developing an HTTP API hosted on a Compute Engine virtual machine instance that needs to be invoked by multiple clients within the same Virtual Private Cloud (VPC). You want clients to be able to get the IP address of the service.\nWhat should you do?",
         "type": "option",
@@ -3718,6 +3740,7 @@
       },
       {
         "source": "https://chat.openai.com/share/c5584446-ea38-4298-9970-c222f576aa63",
+        "topics":["https://chat.openai.com/share/0ee0f101-84bd-4ee1-a5e9-a166b215cb79"],
         "topic": "",
         "question": "Your application is logging to Stackdriver. You want to get the count of all requests on all /api/alpha/* endpoints. What should you do?",
         "type": "option",
@@ -3732,8 +3755,9 @@
         "most_voted": "B"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/85ce6e85-c8d6-431b-b4d6-e1958fd2d5a4",
         "topic": "",
+        "topics":[],
         "question": "You are writing a single-page web application with a user-interface that communicates with a third-party API for content using XMLHttpRequest. The data displayed on the UI by the API results is less critical than other data displayed on the same web page, so it is acceptable for some requests to not have the API data displayed in the UI. However, calls made to the API should not delay rendering of other parts of the user interface. You want your application to perform well when the API response is an error or a timeout.\nWhat should you do?",
         "type": "option",
         "choices": {
@@ -3748,6 +3772,7 @@
       },
       {
         "source": "https://chat.openai.com/share/17dd7ef9-585b-43d9-a518-d0a453e9cf0c",
+        "topics":["https://chat.openai.com/share/8ddee748-5d9d-422f-a5b6-509b243ba37f"],
         "topic": "",
         "question": "You are creating a web application that runs in a Compute Engine instance and writes a file to any user's Google Drive. You need to configure the application to authenticate to the Google Drive API. What should you do?",
         "type": "option",
@@ -3762,7 +3787,7 @@
         "most_voted": "A"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/6c0b19fa-917b-4fe9-8ef1-916a2e7dba1d",
         "topic": "",
         "question": "Your company has a BigQuery dataset named \"Master\" that keeps information about employee travel and expenses. This information is organized by employee department. That means employees should only be able to view information for their department. You want to apply a security framework to enforce this requirement with the minimum number of steps.\nWhat should you do?",
         "type": "option",
@@ -3777,7 +3802,7 @@
         "most_voted": "C"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/70968941-5dc6-4766-b43a-58fd452b5a2e",
         "topic": "",
         "question": "You are creating a Google Kubernetes Engine (GKE) cluster and run this command:<codeblock>\ngcloud container clusters create large-cluster --num-nodes 200\n</codeblock>The command fails with the error:<codeblock>\ninsufficient regional quota to satisfy request: resource \"CPUS\": \nrequest requires '200.0' and is short '176.0'. project has a quota of '24.0' with '24.0' available\n</codeblock>You want to resolve the issue. What should you do?",
         "type": "option",
@@ -3792,7 +3817,7 @@
         "most_voted": "B"
       },      
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/c7556b91-49e1-4e3e-9fc0-9588c68ce7b4",
         "topic": "",
         "question": "You plan to make a simple HTML application available on the internet. This site keeps information about FAQs for your application. The application is static and contains images, HTML, CSS, and Javascript. You want to make this application available on the internet with as few steps as possible.\nWhat should you do?",
         "type": "option",
@@ -3809,6 +3834,7 @@
       {
         "source": "https://chat.openai.com/share/162aa870-03ff-4ecf-8a01-c3edc7ac648c",
         "topic": "",
+        "topics":["https://chat.openai.com/share/8880869e-ae53-4df0-b24f-1f2c7c4dd4e1"],
         "question": "Your company has deployed a new API to App Engine Standard environment. During testing, the API is not behaving as expected. You want to monitor the application over time to diagnose the problem within the application code without redeploying the application.\nWhich tool should you use?",
         "type": "option",
         "choices": {
@@ -4092,7 +4118,7 @@
         "most_voted": "B"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/a40b06ca-5986-42c8-b72c-dc00375ab9b4",
         "topic": "",
         "question": "Your company wants to expand their users outside the United States for their popular application. The company wants to ensure 99.999% availability of the database for their application and also wants to minimize the read latency for their users across the globe.\nWhich two actions should they take? (Choose two.)",
         "type": "multiple_choice",
@@ -4104,12 +4130,12 @@
           "E": "Create a minimum of two Cloud Spanner instances in separate regions with at least one node.",
           "F": "Create a Cloud Dataflow pipeline to replicate data across different databases."
         },
-        "answer": ["A", "C"],
+        "answer": ["A", "E"],
         "page": 2,
         "most_voted": ["A", "C"]
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/479c6bf6-70e0-4e95-891a-cc2a9760edf8",
         "topic": "",
         "question": "You want to upload files from an on-premises virtual machine to Google Cloud Storage as part of a data migration. These files will be consumed by Cloud DataProc Hadoop cluster in a GCP environment.\nWhich command should you use?",
         "type": "option",
@@ -4124,7 +4150,7 @@
         "most_voted": "A"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/8968215d-b771-4737-bd95-cd86af296f63",
         "topic": "",
         "question": "You migrated your applications to Google Cloud Platform and kept your existing monitoring platform. You now find that your notification system is too slow for time critical problems.\nWhat should you do?",
         "type": "option",
@@ -4139,7 +4165,7 @@
         "most_voted": "A"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/b76950ae-e671-43a4-9205-0f807a7bef9f",
         "topic": "",
         "question": "You have deployed an HTTP(s) Load Balancer with the gcloud commands shown below.<codeblock>\nexport NAME=load-balancer\n\n# Create network\ngcloud compute networks create ${NAME}\n\n# Add instance\ngcloud compute instances create ${NAME}-backend-instance-1\n\n# Create the instance group\ngcloud compute instance-groups unmanaged create ${NAME}-i --subnet ${NAME} --no-address\n\ngcloud compute instance-groups unmanaged set-named-ports ${NAME}-i --named-ports http:80\n\ngcloud compute instance-groups unmanaged add-instances ${NAME}-i --instances ${NAME}-backend-instance-1\n\n# Configure health checks\ngcloud compute health-checks create http ${NAME}-http-hc --port 80\n\n# Create backend service\ngcloud compute backend-services create ${NAME}-http-bes --health-checks ${NAME}-http-hc --protocol HTTP --port-name http --global\n\ngcloud compute backend-services add-backend ${NAME}-http-bes --instance-group ${NAME}-i --balancing-mode RATE --max-rate 100000 --capacity-scaler 1.0 --global --instance-group-zone us-east1-d\n\n# Create URLs maps and forwarding rule\ngcloud compute url-maps create ${NAME}-http-urlmap --default-service ${NAME}-http-bes\n\ngcloud compute target-http-proxies create ${NAME}-http-proxy --url-map ${NAME}-http-urlmap\n\ngcloud compute forwarding-rules create ${NAME}-http-fw --global --target-http-proxy ${NAME}-http-proxy --ports 80\n\n </codeblock>Health checks to port 80 on the Compute Engine virtual machine instance are failing and no traffic is sent to your instances. You want to resolve the problem.\nWhich commands should you run?",
         "type": "option",
@@ -4154,7 +4180,7 @@
         "most_voted": "C"
       },
       {
-        "source": "",
+        "source": "https://chat.openai.com/share/7d104fc7-31f3-42e4-8a71-b22269cd264d",
         "topic": "",
         "question": "Your website is deployed on Compute Engine. Your marketing team wants to test conversion rates between 3 different website designs.\nWhich approach should you use?",
         "type": "option",
