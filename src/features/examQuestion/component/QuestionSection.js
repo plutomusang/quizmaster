@@ -7,8 +7,9 @@ import SelectableLabels from './subcomponents/SelectableLabels';
 import { extractTitles, highlightKeywordsInQuestionAsString } from '../../../utils/transformQuestionData';
 
 const QuestionText = styled.div`
-  font-size: 18px;
+  font-size: 18px;  
   font-weight: bold;
+  padding-bottom: 1.6em;
   text-align: left; /* This aligns text to the left */
 `;
 
@@ -28,6 +29,8 @@ const QuestionSection = ({ questionData }) => {
 
   return (
     <>
+      {/* Render the SelectableLabels component */}
+      {labels.length > 0 && <SelectableLabels labels={labels} onLabelSelect={handleLabelSelection} />}
       {/* Render conditional sections */}
       {questionSectionConfig.map(({ title, key }) => (
         <ConditionalSection
@@ -38,8 +41,7 @@ const QuestionSection = ({ questionData }) => {
       ))}
       {/* Render the question text with ContentFormatter */}
       <QuestionText><ContentFormatter text={questionText}/></QuestionText>
-      {/* Render the SelectableLabels component */}
-      {labels.length > 0 && <SelectableLabels labels={labels} onLabelSelect={handleLabelSelection} />}
+
     </>
   );
 };
